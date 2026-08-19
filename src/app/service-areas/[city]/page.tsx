@@ -178,6 +178,21 @@ const CITY_FAQS: Record<string, { question: string; answer: string }[]> = {
       answer:
         "Absolutely. Many Naperville business clients have us service their vehicles in office parking lots during the workday. We just need water and power access.",
     },
+    {
+      question: "How much does interior detailing cost in Naperville?",
+      answer:
+        "Our Full Interior Detail is $220 for sedans and $240 for SUVs and larger vehicles, with the same pricing throughout Naperville and no travel surcharge. If you'd also like the exterior handled, our Interior + Exterior package is $300 for sedans and $320 for SUVs and includes a hand wash, spray wax, tire shine, and exterior windows.",
+    },
+    {
+      question: "Do you detail cars near downtown Naperville and the Riverwalk?",
+      answer:
+        "Yes — we serve homes and businesses throughout downtown Naperville, the Historic District, and the neighborhoods around the Riverwalk. As long as we can reach a water spigot and a standard outlet, we can detail your vehicle there.",
+    },
+    {
+      question: "Can you remove road salt and winter stains from my carpets in Naperville?",
+      answer:
+        "Definitely. Salt and slush from Naperville winters get ground deep into carpets and floor mats. Our carpet extraction and seat shampoo services are built to pull that buildup out — not just cover it up. Many Naperville drivers book a deep interior detail every spring for exactly this reason.",
+    },
   ],
   "arlington-heights": [
     {
@@ -291,6 +306,50 @@ const CITY_FAQS: Record<string, { question: string; answer: string }[]> = {
   ],
 };
 
+// Optional deep, city-specific SEO content. Only cities present here render the
+// extended local section — keeps other city pages lean while letting priority
+// markets (e.g. Naperville) rank on rich, unique local copy.
+const CITY_SECTIONS: Record<
+  string,
+  { neighborhoods?: string[]; sections: { title: string; paragraphs: string[] }[] }
+> = {
+  naperville: {
+    neighborhoods: [
+      "Downtown Naperville & the Riverwalk",
+      "Historic District",
+      "North Naperville (Cress Creek, Saybrook, Huntington Estates)",
+      "South Naperville (White Eagle, Tall Grass, Ashwood Park)",
+      "Stillwater & Country Lakes",
+      "West Naperville along the Route 59 corridor",
+      "Neighborhoods near Neuqua Valley & Metea Valley",
+      "Communities near Naperville North & Naperville Central",
+    ],
+    sections: [
+      {
+        title: "Why Naperville Drivers Choose Mobile Interior Detailing",
+        paragraphs: [
+          "Naperville is consistently ranked one of the best places to live in America — and the driveways here are full of vehicles that reflect that: family SUVs, luxury sedans, EVs, and daily commuters that log serious miles on I-88, Route 59, and Ogden Avenue. Between school pickups near Neuqua Valley and Metea Valley, weekend trips downtown to the Riverwalk, and long corporate commutes, Naperville cars pick up a lot of life inside the cabin.",
+          "Neat Touch Auto Spa was built for exactly that. Instead of dropping your car at a shop and waiting, we bring a complete interior detail to your Naperville home or office. You keep your day; we handle the crumbs, spills, pet hair, salt, and odors. When we leave, your interior looks and smells like the day you drove it home.",
+        ],
+      },
+      {
+        title: "Interior Detailing Built for Naperville Roads & Seasons",
+        paragraphs: [
+          "DuPage and Will County winters are hard on interiors. Road salt and slush from Naperville streets get tracked into carpets and floor mats, and by spring most cabins are hiding white salt stains and grit deep in the fibers. Our carpet extraction and seat shampoo services are designed to lift exactly that kind of buildup — not just mask it.",
+          "In summer, UV coming through the windshield dries out leather and dashboards. Our Full Interior Detail includes conditioning for leather seats and dressing for trim and plastics, so your Naperville vehicle's interior is protected year-round. Every product we use is pH-neutral and interior-safe — appropriate for everything from a Tesla cabin to a family minivan.",
+        ],
+      },
+      {
+        title: "Transparent Naperville Pricing",
+        paragraphs: [
+          "Our pricing is the same across every suburb we serve — there are no travel surcharges for Naperville. A Full Interior Detail is $220 for sedans and $240 for SUVs and larger vehicles. Want the outside handled too? Our Interior + Exterior package adds a hand wash, spray wax, tire cleaning and shine, and exterior windows for $300 (sedan) or $320 (SUV).",
+          "Popular add-ons for Naperville families include pet hair removal and odor treatment. Not sure what your vehicle needs? Send us a few photos and we'll give you an honest recommendation before you book — no upsells on services you don't need.",
+        ],
+      },
+    ],
+  },
+};
+
 const DEFAULT_FAQS = [
   {
     question: "Do I need to provide anything for the service?",
@@ -344,6 +403,7 @@ export default async function CityPage({ params }: Props) {
 
   const intro = CITY_INTROS[city] || `Neat Touch Auto Spa provides premium mobile auto detailing in ${cityData.name}, IL. We bring professional detailing services directly to your home or office throughout ${cityData.name} and surrounding areas.`;
   const faqs = CITY_FAQS[city] || DEFAULT_FAQS;
+  const deepContent = CITY_SECTIONS[city];
 
   const schemaLD = {
     ...localBusinessSchema(cityData.name),
@@ -438,6 +498,51 @@ export default async function CityPage({ params }: Props) {
           </div>
         </div>
       </section>
+
+      {/* Deep local SEO content (priority markets only) */}
+      {deepContent && (
+        <section className="bg-gray-50 section-padding">
+          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            {deepContent.sections.map((sec) => (
+              <div key={sec.title} className="mb-12 last:mb-0">
+                <h2
+                  className="text-2xl md:text-3xl font-bold text-black mb-4"
+                  style={{ fontFamily: "var(--font-playfair, serif)" }}
+                >
+                  {sec.title}
+                </h2>
+                {sec.paragraphs.map((p, i) => (
+                  <p key={i} className="text-gray-600 leading-relaxed mb-4">
+                    {p}
+                  </p>
+                ))}
+              </div>
+            ))}
+
+            {deepContent.neighborhoods && (
+              <div className="mt-4 border-t border-gray-200 pt-10">
+                <h2
+                  className="text-2xl md:text-3xl font-bold text-black mb-6"
+                  style={{ fontFamily: "var(--font-playfair, serif)" }}
+                >
+                  Naperville Neighborhoods We Detail
+                </h2>
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                  {deepContent.neighborhoods.map((n) => (
+                    <div key={n} className="flex items-start gap-2">
+                      <Check size={16} className="text-[#C9A84C] mt-0.5 flex-shrink-0" />
+                      <span className="text-gray-600 text-sm">{n}</span>
+                    </div>
+                  ))}
+                </div>
+                <p className="text-gray-500 text-sm mt-6">
+                  Don&apos;t see your neighborhood? We serve all of {cityData.name} ({cityData.zips.join(", ")}) and nearby {cityData.nearby.join(", ")}. Just reach out to confirm your address.
+                </p>
+              </div>
+            )}
+          </div>
+        </section>
+      )}
 
       {/* Services offered */}
       <section className="bg-white section-padding">

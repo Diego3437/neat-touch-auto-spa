@@ -11,6 +11,172 @@ export interface BlogPost {
 
 export const BLOG_POSTS: BlogPost[] = [
   {
+    slug: "mobile-auto-detailing-naperville-il",
+    title: "Mobile Auto Detailing in Naperville, IL: A Local's Guide",
+    date: "2026-08-18",
+    excerpt:
+      "Everything Naperville drivers need to know about mobile auto detailing — how it works, what it costs, and why more residents are skipping the shop and having the detail come to their driveway.",
+    metaTitle: "Mobile Auto Detailing in Naperville, IL | Neat Touch Auto Spa",
+    metaDescription:
+      "A local's guide to mobile auto detailing in Naperville, IL — how it works, pricing, and what's included. Neat Touch Auto Spa comes to your Naperville home or office.",
+    tags: ["Naperville", "mobile detailing", "local guide"],
+    content: `
+# Mobile Auto Detailing in Naperville, IL: A Local's Guide
+
+Naperville regularly lands near the top of "best places to live" lists in America — and it shows in the driveways. Family SUVs, luxury sedans, EVs, and high-mileage commuters fill the neighborhoods from Cress Creek to White Eagle. But all that driving on I-88, Route 59, and Ogden Avenue takes a toll on the inside of your vehicle.
+
+This is a practical guide to how mobile auto detailing works in Naperville, what it costs, and how to decide if it's right for you.
+
+## What Is Mobile Auto Detailing?
+
+Mobile auto detailing means the detailer comes to you. Instead of dropping your car at a shop and arranging a ride home, a fully-equipped detailer arrives at your Naperville home or office and performs the entire service in your driveway or parking lot.
+
+At Neat Touch Auto Spa, we bring our own water and power backup, professional-grade extractors, and interior-safe products. You go about your day — we handle the car.
+
+## Why Naperville Drivers Are Switching to Mobile
+
+- **No wasted time.** No sitting in a waiting room off Ogden or driving across town twice. The detail happens while you work, run errands, or relax at home.
+- **Convenience for busy families.** Between school runs near Neuqua Valley and Metea Valley and weekend trips downtown to the Riverwalk, most families can't spare half a day at a shop.
+- **The same quality — at your door.** A mobile detail isn't a lesser service. It's the full interior detail, performed on-site with the same tools and care.
+
+## What's Included in a Full Interior Detail
+
+Our core Naperville service is a complete interior detail:
+
+- Full vacuum of seats, carpets, mats, and trunk
+- Dashboard, console, and door panel cleaning
+- Interior window cleaning
+- Leather cleaning and conditioning
+- Trim and plastic dressing
+- Door jamb cleaning
+- Air freshener finish
+
+Popular add-ons include pet hair removal, odor treatment, carpet extraction, and seat shampoo for deeper stains.
+
+## What It Costs in Naperville
+
+Our pricing is consistent across every suburb we serve — there are no travel surcharges for Naperville:
+
+- **Full Interior Detail:** $220 sedan / $240 SUV and larger
+- **Interior + Exterior package:** $300 sedan / $320 SUV — adds a hand wash, spray wax, tire cleaning and shine, and exterior windows
+
+If you're not sure what your vehicle needs, send us a few photos before booking and we'll give you an honest recommendation — no pressure to add services you don't need.
+
+## What You Need to Provide
+
+Very little. We just need access to a standard water spigot (garden hose connection) and a standard 110V electrical outlet near where the vehicle will be parked. We bring everything else.
+
+## Book Your Naperville Detail
+
+Neat Touch Auto Spa serves all of Naperville — North and South Naperville, the Historic District, downtown, and the Route 59 corridor — plus nearby Aurora, Lisle, Warrenville, and Bolingbrook. Book online or call (464) 249-0177 and we'll come to you.
+    `.trim(),
+  },
+  {
+    slug: "interior-car-detailing-naperville-cost",
+    title: "Interior Car Detailing in Naperville: Cost, What's Included & Why It's Worth It",
+    date: "2026-08-14",
+    excerpt:
+      "How much does interior car detailing cost in Naperville, and what do you actually get? Here's a transparent breakdown of pricing, services, and value.",
+    metaTitle: "Interior Car Detailing Naperville: Cost & What's Included | Neat Touch Auto Spa",
+    metaDescription:
+      "Transparent pricing for interior car detailing in Naperville, IL. See exactly what's included, what add-ons cost, and why mobile interior detailing is worth it.",
+    tags: ["Naperville", "interior detailing", "pricing"],
+    content: `
+# Interior Car Detailing in Naperville: Cost, What's Included & Why It's Worth It
+
+If you've searched "interior car detailing Naperville" and found wildly different prices, you're not alone. Detailing pricing can feel like a mystery. This guide breaks down exactly what interior detailing costs in Naperville, what's included at each level, and how to know you're getting real value.
+
+## Interior Detailing Pricing in Naperville
+
+At Neat Touch Auto Spa, our pricing is simple and the same across every suburb — no travel surcharge for Naperville:
+
+- **Full Interior Detail:** $220 for sedans, $240 for SUVs and larger vehicles
+- **Interior + Exterior package:** $300 for sedans, $320 for SUVs
+
+The Interior + Exterior package adds an exterior hand wash and dry, spray wax, tire cleaning and shine, and exterior windows on top of the complete interior service.
+
+## What's Actually Included
+
+A true interior detail is far more than a vacuum and wipe-down. Our Full Interior Detail covers:
+
+- Complete vacuum — seats, carpets, floor mats, trunk, and hard-to-reach crevices
+- Dashboard, center console, cup holders, and vents
+- Door panels and door jambs
+- Interior glass cleaned streak-free
+- Leather seats cleaned and conditioned
+- Trim and plastics dressed and protected
+- Finishing air freshener
+
+## Add-Ons for Deeper Problems
+
+Some interiors need more than a standard detail. Common Naperville add-ons include:
+
+- **Pet hair removal** — for dog and cat owners; embedded hair takes specialized tools
+- **Odor treatment** — for smoke, food, pets, or lingering smells
+- **Carpet extraction** — hot-water extraction that pulls staining and salt out of carpet fibers
+- **Seat shampoo** — deep cleaning for cloth seats with set-in stains
+
+## Why Interior Detailing Is Worth It
+
+- **Protects resale value.** A clean, well-maintained interior is one of the biggest factors buyers and dealers notice. Neglected interiors quietly lower what your car is worth.
+- **Healthier cabin.** Vacuuming and extraction remove dust, allergens, crumbs, and bacteria that build up over months of daily driving.
+- **You enjoy your car again.** There's a real difference between climbing into a fresh, clean cabin every morning versus one full of clutter and stains.
+
+## Is Mobile Interior Detailing Cheaper?
+
+Mobile detailing isn't about being cheaper — it's about being convenient. You get the same thorough interior service without losing hours of your day. For busy Naperville families and professionals, that saved time is often worth more than the price difference either way.
+
+## Get a Straight Answer on Your Car
+
+Not sure whether you need a standard interior detail or a few add-ons? Send us photos of your interior and we'll tell you honestly what we'd recommend — and what we wouldn't. Book online or call (464) 249-0177 to schedule in Naperville.
+    `.trim(),
+  },
+  {
+    slug: "naperville-winter-car-interior-salt",
+    title: "Protecting Your Car's Interior Through a Naperville Winter",
+    date: "2026-08-11",
+    excerpt:
+      "Naperville winters are brutal on car interiors. Here's how road salt, slush, and moisture damage your cabin — and what actually keeps it protected.",
+    metaTitle: "Naperville Winter Car Interior Care: Salt & Slush | Neat Touch Auto Spa",
+    metaDescription:
+      "How Naperville winters damage your car's interior with road salt and slush — and the detailing steps that actually protect your carpets, mats, and leather.",
+    tags: ["Naperville", "winter car care", "interior detailing"],
+    content: `
+# Protecting Your Car's Interior Through a Naperville Winter
+
+Anyone who has driven a Naperville winter knows the routine: salt-crusted floor mats, gritty carpets, foggy windows, and that gray haze that settles over everything inside the cabin by February. DuPage and Will County roads get heavily salted, and all of it ends up inside your vehicle.
+
+Here's what winter actually does to your interior — and how to keep it protected.
+
+## How Winter Damages Your Interior
+
+- **Road salt in the carpets.** Salt and de-icing chemicals get tracked in on boots and settle deep into carpet fibers and floor mats. Left alone, they dry into white stains and slowly break down the carpet backing.
+- **Moisture and slush.** Melting snow soaks into carpets and padding. Trapped moisture leads to musty odors and, over a full season, can encourage mildew.
+- **Dry, cracking leather.** Cold air and blasting heaters pull moisture out of leather seats, leaving them prone to cracking without regular conditioning.
+- **Salt on door sills and jambs.** The areas you brush past every time you get in collect grime that's easy to ignore until spring.
+
+## What Actually Protects Your Cabin
+
+**1. Use quality floor mats — and clean them often.** Rubber all-weather mats catch the worst of it, but they still need to be emptied and rinsed regularly so salt doesn't migrate into the carpet underneath.
+
+**2. Knock the snow off before you get in.** A few seconds stomping boots and brushing pant legs keeps a surprising amount of salt and slush out of the cabin.
+
+**3. Book a deep interior detail in early spring.** This is the big one. Once the salt season ends, a carpet extraction and seat shampoo lifts the winter's accumulated salt, grit, and staining out of the fibers — restoring the interior instead of just masking it.
+
+**4. Condition your leather.** Regular leather cleaning and conditioning replaces the moisture winter strips away and helps prevent cracking.
+
+## Why a Spring Detail Beats DIY
+
+You can vacuum and wipe surfaces at home, but a household vacuum won't pull dissolved salt out of deep carpet the way professional hot-water extraction does. Salt is water-soluble — it needs to be dissolved and extracted, not just brushed. That's exactly what our carpet extraction service is built for.
+
+## Naperville's Spring Reset
+
+Every year, Naperville drivers book a deep interior detail as soon as the salt trucks stop running. It's the single best thing you can do to undo a winter's damage and start the warm season with a fresh, clean cabin.
+
+Neat Touch Auto Spa comes to your Naperville driveway — no need to leave home. Book online or call (464) 249-0177 to schedule your spring interior reset.
+    `.trim(),
+  },
+  {
     slug: "how-often-should-you-detail-your-car",
     title: "How Often Should You Detail Your Car?",
     date: "2024-10-15",
