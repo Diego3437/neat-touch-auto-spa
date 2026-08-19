@@ -4,6 +4,7 @@ import "./globals.css";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { StickyMobileBar } from "@/components/layout/StickyMobileBar";
+import { Analytics } from "@vercel/analytics/next";
 import { BUSINESS, SEO_KEYWORDS } from "@/lib/constants";
 import { localBusinessSchema, websiteSchema } from "@/lib/schema";
 
@@ -94,6 +95,7 @@ export default function RootLayout({
         <main>{children}</main>
         <Footer />
         <StickyMobileBar />
+        <Analytics />
       </body>
     </html>
   );
