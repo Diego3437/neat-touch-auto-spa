@@ -3,13 +3,15 @@ import { Star, ExternalLink } from "lucide-react";
 import Link from "next/link";
 import { REVIEWS, BUSINESS } from "@/lib/constants";
 import { CTASection } from "@/components/sections/CTASection";
+import { ThumbtackBadgeCard } from "@/components/ui/ThumbtackBadge";
+import { Award } from "lucide-react";
 
 export const revalidate = 3600;
 
 export const metadata: Metadata = {
   title: "Customer Reviews | Neat Touch Auto Spa",
   description:
-    "Read reviews from real customers of Neat Touch Auto Spa. 5-star mobile auto detailing across the Chicago suburbs — Schaumburg, Naperville, Elgin & more.",
+    "Read reviews from real customers of Neat Touch Auto Spa — a Thumbtack Top Pro with 54 five-star reviews. 5-star mobile auto detailing across the Chicago suburbs: Schaumburg, Naperville, Elgin & more.",
 };
 
 function StarRow({ count = 5 }: { count?: number }) {
@@ -50,6 +52,22 @@ export default function ReviewsPage() {
             </div>
             <span className="text-gray-400 text-sm">Average Rating · {BUSINESS.rating.count} Google Reviews</span>
           </div>
+
+          {/* Thumbtack Top Pro trust line */}
+          <div className="mt-6">
+            <a
+              href={BUSINESS.thumbtack.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-5 py-2.5 text-sm text-white hover:border-[#C9A84C] transition-colors"
+            >
+              <span className="inline-flex items-center gap-1 rounded-full bg-[#C9A84C]/15 px-2 py-0.5 text-[11px] font-semibold text-[#C9A84C]">
+                <Award size={11} /> Top Pro
+              </span>
+              <span className="font-semibold">{BUSINESS.thumbtack.reviews} Five-Star Reviews</span>
+              <span className="text-gray-400">on Thumbtack</span>
+            </a>
+          </div>
         </div>
       </section>
 
@@ -72,6 +90,11 @@ export default function ReviewsPage() {
                 </div>
               </div>
             ))}
+          </div>
+
+          {/* Thumbtack social proof */}
+          <div className="mb-6">
+            <ThumbtackBadgeCard />
           </div>
 
           {/* Google CTA */}

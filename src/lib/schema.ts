@@ -64,7 +64,10 @@ export function localBusinessSchema(city?: string) {
         closes: "18:00",
       },
     ],
-    sameAs: Object.values(BUSINESS.social).filter((u) => !u.startsWith("[")),
+    sameAs: [
+      ...Object.values(BUSINESS.social).filter((u) => !u.startsWith("[")),
+      BUSINESS.thumbtack.url,
+    ],
     aggregateRating: {
       "@type": "AggregateRating",
       ratingValue: BUSINESS.rating.value,

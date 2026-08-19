@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Phone, Mail, Clock, MapPin } from "lucide-react";
+import { Phone, Mail, Clock, MapPin, Award } from "lucide-react";
 import { BUSINESS, CITIES } from "@/lib/constants";
 
 export function Footer() {
@@ -77,6 +77,16 @@ export function Footer() {
                 </svg>
               </a>
             </div>
+            {/* Thumbtack Top Pro */}
+            <a
+              href={BUSINESS.thumbtack.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-1.5 mt-4 text-xs text-gray-400 hover:text-[#C9A84C] transition-colors"
+            >
+              <Award size={13} className="text-[#C9A84C]" />
+              <span>Thumbtack Top Pro · {BUSINESS.thumbtack.reviews} five-star reviews</span>
+            </a>
           </div>
 
           {/* Quick Links */}

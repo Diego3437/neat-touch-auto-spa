@@ -19,6 +19,12 @@ export const BUSINESS = {
     tiktok: "https://www.tiktok.com/@neat.touch.auto.sp",
   },
   rating: { value: 5.0, count: 17 },
+  thumbtack: {
+    url: "https://www.thumbtack.com/profile/services/548908778321674240/",
+    reviews: 54,
+    rating: 5.0,
+    topPro: true,
+  },
   founded: "2021",
   ogImage: "/opengraph-image",
   logo: "/icon",

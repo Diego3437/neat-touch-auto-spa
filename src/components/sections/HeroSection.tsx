@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Phone, ChevronDown, Star, ShieldCheck, MapPin } from "lucide-react";
+import { Phone, ChevronDown, Star, ShieldCheck, MapPin, Award } from "lucide-react";
 import { BUSINESS, STATS } from "@/lib/constants";
 
 export function HeroSection() {
@@ -24,19 +24,32 @@ export function HeroSection() {
       <div className="absolute bottom-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-[#C9A84C]/40 to-transparent" />
 
       <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center py-28 md:py-32">
-        {/* Rating badge */}
+        {/* Trust badges */}
         <div
-          className="animate-fade-up inline-flex items-center gap-2 rounded-full border border-[#C9A84C]/30 bg-[#C9A84C]/10 px-4 py-1.5 mb-7"
+          className="animate-fade-up flex flex-wrap items-center justify-center gap-2 mb-7"
           style={{ animationDelay: "0ms" }}
         >
-          <div className="flex">
-            {Array.from({ length: 5 }).map((_, i) => (
-              <Star key={i} size={13} className="fill-[#C9A84C] text-[#C9A84C]" />
-            ))}
+          <div className="inline-flex items-center gap-2 rounded-full border border-[#C9A84C]/30 bg-[#C9A84C]/10 px-4 py-1.5">
+            <div className="flex">
+              {Array.from({ length: 5 }).map((_, i) => (
+                <Star key={i} size={13} className="fill-[#C9A84C] text-[#C9A84C]" />
+              ))}
+            </div>
+            <span className="text-[#E0C47A] text-xs font-semibold tracking-wide">
+              Rated {BUSINESS.rating.value.toFixed(1)} by {BUSINESS.rating.count} happy customers
+            </span>
           </div>
-          <span className="text-[#E0C47A] text-xs font-semibold tracking-wide">
-            Rated {BUSINESS.rating.value.toFixed(1)} by {BUSINESS.rating.count} happy customers
-          </span>
+          <a
+            href={BUSINESS.thumbtack.url}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 rounded-full border border-[#C9A84C]/30 bg-[#C9A84C]/10 px-4 py-1.5 hover:border-[#C9A84C] transition-colors"
+          >
+            <Award size={13} className="text-[#C9A84C]" />
+            <span className="text-[#E0C47A] text-xs font-semibold tracking-wide">
+              Thumbtack Top Pro · {BUSINESS.thumbtack.reviews} five-star reviews
+            </span>
+          </a>
         </div>
 
         <h1
