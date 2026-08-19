@@ -4,19 +4,34 @@ import { SectionHeader } from "@/components/ui/SectionHeader";
 
 const WORK = [
   {
-    src: "/gallery/interior-1.jpg",
-    label: "Protected & Finished",
-    alt: "Clean car interior with protective mat after mobile detailing in the Chicago suburbs",
+    src: "/gallery/merc-exterior.jpg",
+    label: "Detailed at Your Driveway",
+    alt: "White Mercedes SUV detailed on-site in a Chicago suburbs driveway",
   },
   {
-    src: "/gallery/interior-2.jpg",
-    label: "Back Seat Deep Clean",
-    alt: "Freshly cleaned leather back seat detailed by Neat Touch Auto Spa",
+    src: "/gallery/ford-front.jpg",
+    label: "Front Interior, Deep Cleaned",
+    alt: "Ford Edge front seats and dashboard after interior detailing",
   },
   {
-    src: "/gallery/interior-3.jpg",
-    label: "Front Interior Refresh",
-    alt: "Detailed front interior of an SUV in the affluent Chicago suburbs",
+    src: "/gallery/merc-backseat.jpg",
+    label: "Back Seats Like New",
+    alt: "Clean cream leather back seat of an SUV detailed by Neat Touch Auto Spa",
+  },
+  {
+    src: "/gallery/ford-detail.jpg",
+    label: "Attention to Every Detail",
+    alt: "Ford Edge interior with protective floor mat after mobile detailing",
+  },
+  {
+    src: "/gallery/merc-front.jpg",
+    label: "Premium Interior Care",
+    alt: "Detailed cream leather front seats and wood trim in a Mercedes SUV",
+  },
+  {
+    src: "/gallery/ford-exterior.jpg",
+    label: "We Come to You",
+    alt: "Silver Ford Edge detailed in an affluent Chicago suburbs driveway",
   },
 ];
 
