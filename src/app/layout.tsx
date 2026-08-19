@@ -37,6 +37,9 @@ export const metadata: Metadata = {
   alternates: {
     canonical: BUSINESS.url,
   },
+  verification: {
+    google: "BABAG6XGcfmSxy_nB9m0TBfu9Rqh1Ieisevk5es_fIU",
+  },
   robots: {
     index: true,
     follow: true,
