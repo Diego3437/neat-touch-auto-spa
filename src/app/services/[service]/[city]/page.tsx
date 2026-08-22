@@ -146,7 +146,10 @@ export default async function LongTailServiceCityPage({ params }: Props) {
     outcome: "a cleaner vehicle with professional mobile detailing results",
     season: "throughout the year in the Chicago suburbs",
   };
-  const faqs = buildFaqs(service.name, city.name);
+  const faqs = [
+    ...(city.localFaq ? [city.localFaq] : []),
+    ...buildFaqs(service.name, city.name),
+  ];
   const path = `/services/${service.id}/${city.slug}`;
   const pageTitle = `${service.name} in ${city.name}, IL`;
 

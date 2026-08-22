@@ -70,7 +70,12 @@ export const CITIES = [
     nearby: ["Aurora", "Lisle", "Warrenville", "Bolingbrook"],
     zips: ["60540", "60563", "60564", "60565"],
     localNote:
-      "From condos near downtown Naperville and the Riverwalk to family homes in Ashwood Park and White Eagle, we handle the winter road salt and everyday family mess Naperville interiors collect.",
+      "In Naperville we detail everything from condos near downtown and the Riverwalk to family homes in Ashwood Park and White Eagle — where winter road salt and sand tracked in from the Riverwalk are common complaints in the carpets and mats.",
+    localFaq: {
+      question: "Do you serve the whole Naperville area?",
+      answer:
+        "Yes — we regularly serve central Naperville and the areas near the Riverwalk and downtown, plus nearby Aurora, Lisle, Warrenville and Bolingbrook.",
+    },
   },
   {
     name: "Aurora",
@@ -79,7 +84,12 @@ export const CITIES = [
     nearby: ["Naperville", "Montgomery", "North Aurora", "Oswego"],
     zips: ["60502", "60503", "60504", "60505", "60506"],
     localNote:
-      "Aurora is Illinois' second-largest city and we cover it end to end — from the Fox Valley Mall area and the Orchard Road corridor to historic downtown near the Paramount Theatre.",
+      "In Aurora we cover both the Fox Valley Mall area and the newer residential neighborhoods out in the 60504 zone that have grown fast in recent years — from historic downtown near the Paramount Theatre to the Naperville and Oswego borders.",
+    localFaq: {
+      question: "Do you serve all of Aurora?",
+      answer:
+        "We serve the full span of Aurora, from the Naperville–Aurora side to the Oswego and Montgomery borders.",
+    },
   },
   {
     name: "Oswego",
@@ -88,7 +98,12 @@ export const CITIES = [
     nearby: ["Aurora", "Montgomery", "Yorkville", "Plainfield"],
     zips: ["60543"],
     localNote:
-      "Oswego is one of our highest-satisfaction areas — local families regularly book full interior details and pet hair removal for their SUVs near downtown Oswego and along the Route 34 corridor.",
+      "Oswego is one of our highest booking-rate areas — local families in the newer subdivisions often book a full interior detail before a family event or before selling the vehicle, right in the driveway near downtown Oswego and the Route 34 corridor.",
+    localFaq: {
+      question: "Do you serve the whole Oswego area?",
+      answer:
+        "Oswego is one of our highest booking-rate areas — most quote requests turn into a confirmed appointment. We serve all of Oswego plus nearby Yorkville, Montgomery and Aurora.",
+    },
   },
   {
     name: "Lombard",
@@ -97,7 +112,12 @@ export const CITIES = [
     nearby: ["Villa Park", "Glen Ellyn", "Addison", "Downers Grove"],
     zips: ["60148"],
     localNote:
-      "From homes near Lilacia Park to commuters along Roosevelt Road and drivers around Yorktown Center, Lombard interiors take a beating from daily DuPage commuting and winter salt.",
+      "In Lombard we detail a lot of residential neighborhoods near Lombard Common Park and the Metra line, where many clients prefer to book a weekend detail at home instead of driving to a shop — it's one of the areas we get the most quote requests from.",
+    localFaq: {
+      question: "Do you serve the whole Lombard area?",
+      answer:
+        "Lombard is one of the areas we get the most quote requests from — we usually confirm a time within one business day. We serve all of Lombard plus nearby Villa Park, Glen Ellyn and Elmhurst.",
+    },
   },
   {
     name: "Glenview",
@@ -106,7 +126,12 @@ export const CITIES = [
     nearby: ["Northbrook", "Wilmette", "Golf", "Morton Grove"],
     zips: ["60025", "60026"],
     localNote:
-      "From The Glen Town Center to established neighborhoods near Wagner Farm, Glenview drivers rely on us to keep leather and cloth interiors looking their best year-round.",
+      "In Glenview and the north end of the North Shore, the typical vehicle is a family SUV and the most-requested work is upholstery cleaning and pet hair removal — we bring it all to your driveway near The Glen and Wagner Farm.",
+    localFaq: {
+      question: "Do you serve the whole Glenview area?",
+      answer:
+        "We're expanding across Glenview and the North Shore — book ahead to lock in the best time. We also serve nearby Northbrook, Wilmette and Niles.",
+    },
   },
   {
     name: "Deerfield",
@@ -115,7 +140,12 @@ export const CITIES = [
     nearby: ["Highland Park", "Northbrook", "Riverwoods", "Bannockburn"],
     zips: ["60015"],
     localNote:
-      "We serve Deerfield homes and businesses from Deerfield Square to the neighborhoods off Waukegan and Lake Cook Road, where winter salt and slush are hard on carpets and floor mats.",
+      "In Deerfield we detail a lot of homes set back from the center, where booking a detail at home saves the drive to Highland Park or Northbrook — and winter salt and slush off Lake Cook Road are hard on carpets and floor mats.",
+    localFaq: {
+      question: "Do you serve the whole Deerfield area?",
+      answer:
+        "Deerfield and the Highland Park area are among the northernmost areas we serve regularly, along with nearby Northbrook and Bannockburn.",
+    },
   },
   {
     name: "Geneva",
@@ -125,6 +155,11 @@ export const CITIES = [
     zips: ["60134"],
     localNote:
       "Geneva's tree-lined streets near Third Street and the Fox River look great, but pollen, mud and winter salt still find their way into your cabin — that's where we come in.",
+    localFaq: {
+      question: "Do you serve the whole Geneva area?",
+      answer:
+        "Yes — we serve all of Geneva, from the Third Street shops to the Fox River neighborhoods, plus nearby Batavia, St. Charles and North Aurora.",
+    },
   },
   {
     name: "Dundee",
@@ -133,7 +168,12 @@ export const CITIES = [
     nearby: ["East Dundee", "West Dundee", "Carpentersville", "Algonquin"],
     zips: ["60118"],
     localNote:
-      "We serve both East and West Dundee along the Fox River, where winter road salt and river-town dust are the most common reasons local drivers book an interior detail.",
+      "We serve both East and West Dundee — many homes have garages opening right onto Route 31, where street dust and road salt build up fast in the carpet. We handle it right in your driveway along the Fox River.",
+    localFaq: {
+      question: "Do you serve the whole Dundee area?",
+      answer:
+        "We cover East Dundee, West Dundee and the areas near Carpentersville and Algonquin.",
+    },
   },
 ];
 
