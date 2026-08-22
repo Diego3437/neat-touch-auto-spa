@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
-import { Check, Phone } from "lucide-react";
+import { Check, Phone, Star } from "lucide-react";
 import Link from "next/link";
 import { CITIES, SERVICES, BUSINESS } from "@/lib/constants";
 import { localBusinessSchema, faqSchema, breadcrumbSchema, webPageSchema } from "@/lib/schema";
@@ -645,6 +645,16 @@ const CITY_SECTIONS: Record<
   },
 };
 
+// Real, verified customer testimonials tied to a specific city. Only add a city
+// here when there is a genuine review from a customer in that city.
+const CITY_TESTIMONIALS: Record<string, { name: string; text: string; meta: string }> = {
+  geneva: {
+    name: "Zach Sweeney",
+    text: "Diego was great! Car looks amazing and smells great! Really appreciated him coming all the way to Geneva. Will be using him again on my wife's car. Five out of five, highly recommend.",
+    meta: "Verified Google review · Geneva, IL",
+  },
+};
+
 const DEFAULT_FAQS = [
   {
     question: "Do I need to provide anything for the service?",
@@ -699,6 +709,7 @@ export default async function CityPage({ params }: Props) {
   const intro = CITY_INTROS[city] || `Neat Touch Auto Spa provides premium mobile auto detailing in ${cityData.name}, IL. We bring professional detailing services directly to your home or office throughout ${cityData.name} and surrounding areas.`;
   const faqs = CITY_FAQS[city] || DEFAULT_FAQS;
   const deepContent = CITY_SECTIONS[city];
+  const testimonial = CITY_TESTIMONIALS[city];
 
   const schemaLD = {
     ...localBusinessSchema(cityData.name),
@@ -835,6 +846,27 @@ export default async function CityPage({ params }: Props) {
                 </p>
               </div>
             )}
+          </div>
+        </section>
+      )}
+
+      {/* Real local testimonial */}
+      {testimonial && (
+        <section className="bg-black py-16 border-y border-[#C9A84C]/20">
+          <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <div className="flex justify-center gap-1 mb-5">
+              {Array.from({ length: 5 }).map((_, i) => (
+                <Star key={i} size={20} className="text-[#C9A84C] fill-[#C9A84C]" />
+              ))}
+            </div>
+            <p
+              className="text-xl md:text-2xl text-white leading-relaxed mb-6"
+              style={{ fontFamily: "var(--font-playfair, serif)" }}
+            >
+              &ldquo;{testimonial.text}&rdquo;
+            </p>
+            <p className="text-white font-semibold">{testimonial.name}</p>
+            <p className="text-gray-500 text-sm mt-1">{testimonial.meta}</p>
           </div>
         </section>
       )}

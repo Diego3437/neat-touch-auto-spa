@@ -18,7 +18,7 @@ export const BUSINESS = {
     instagram: "https://www.instagram.com/neattouchautospa",
     tiktok: "https://www.tiktok.com/@neat.touch.auto.sp",
   },
-  rating: { value: 5.0, count: 17 },
+  rating: { value: 5.0, count: 18 },
   thumbtack: {
     url: "https://www.thumbtack.com/profile/services/548908778321674240/",
     reviews: 54,
@@ -373,6 +373,12 @@ export const ADDONS = [
 
 // Real Google reviews. Add more from your Google Business Profile as you collect them.
 export const REVIEWS = [
+  {
+    name: "Zach Sweeney",
+    meta: "Verified Google review · Geneva, IL",
+    rating: 5,
+    text: "Diego was great! Car looks amazing and smells great! Really appreciated him coming all the way to Geneva. Will be using him again on my wife's car. Five out of five, highly recommend.",
+  },
   {
     name: "Maude Annor",
     meta: "Verified Google review",
