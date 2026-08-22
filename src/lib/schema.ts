@@ -90,7 +90,7 @@ export function localBusinessSchema(city?: string) {
       itemOffered: { "@type": "Service", name: s.name, description: s.shortDesc },
     })),
     description:
-      "Neat Touch Auto Spa provides premium mobile interior auto detailing throughout the Chicago suburbs, including Schaumburg, Elgin, Naperville, Arlington Heights and surrounding areas. We specialize in interior detailing — deep cleaning, carpet and seat shampoo, leather care, pet hair and odor removal — brought directly to your home or office, with optional exterior add-ons.",
+      "Neat Touch Auto Spa provides premium mobile interior auto detailing throughout the Chicago suburbs, including Naperville, Aurora, Oswego, Lombard, Glenview, Deerfield and surrounding areas. We specialize in interior detailing — deep cleaning, carpet and seat shampoo, leather care, pet hair and odor removal — brought directly to your home or office, with optional exterior add-ons.",
   };
 }
 

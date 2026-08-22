@@ -198,7 +198,7 @@ export function BookingForm() {
           <input
             name="address"
             type="text"
-            placeholder="123 Main St, Schaumburg, IL 60173"
+            placeholder="123 Main St, Naperville, IL 60540"
             className={inputClass}
           />
           {errors.address && <p className={errClass}>{errors.address}</p>}

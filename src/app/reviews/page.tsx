@@ -11,7 +11,7 @@ export const revalidate = 3600;
 export const metadata: Metadata = {
   title: "Customer Reviews | Neat Touch Auto Spa",
   description:
-    "Read reviews from real customers of Neat Touch Auto Spa — a Thumbtack Top Pro with 54 five-star reviews. 5-star mobile auto detailing across the Chicago suburbs: Schaumburg, Naperville, Elgin & more.",
+    "Read reviews from real customers of Neat Touch Auto Spa — a Thumbtack Top Pro with 54 five-star reviews. 5-star mobile auto detailing across the Chicago suburbs: Naperville, Aurora, Oswego & more.",
 };
 
 function StarRow({ count = 5 }: { count?: number }) {

@@ -14,7 +14,7 @@ export const metadata = buildMetadata({
   path: "/pricing",
   keywords: [
     "mobile auto detailing prices Chicago suburbs",
-    "car detailing pricing Schaumburg",
+    "car detailing pricing Naperville",
     "auto detailing packages near me",
     "interior exterior detail price",
   ],

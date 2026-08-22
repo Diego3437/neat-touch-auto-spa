@@ -1,6 +1,34 @@
 import type { NextConfig } from "next";
 
+// Cities we removed dedicated pages for (based on real lead data). Their old
+// URLs are permanently redirected to the general service-areas page so no link
+// equity is lost and there are no 404s.
+const RETIRED_CITY_SLUGS = [
+  "schaumburg",
+  "elgin",
+  "st-charles",
+  "batavia",
+  "arlington-heights",
+  "barrington",
+  "wheaton",
+  "highland-park",
+];
+
 const nextConfig: NextConfig = {
+  async redirects() {
+    return RETIRED_CITY_SLUGS.flatMap((slug) => [
+      {
+        source: `/service-areas/${slug}`,
+        destination: "/service-areas",
+        permanent: true,
+      },
+      {
+        source: `/services/:service/${slug}`,
+        destination: "/service-areas",
+        permanent: true,
+      },
+    ]);
+  },
   images: {
     formats: ["image/avif", "image/webp"],
     deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048],

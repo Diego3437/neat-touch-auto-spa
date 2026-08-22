@@ -5,11 +5,11 @@ import { breadcrumbSchema, webPageSchema } from "@/lib/schema";
 export const metadata = buildMetadata({
   title: "Contact Mobile Auto Detailers | Neat Touch Auto Spa",
   description:
-    "Contact Neat Touch Auto Spa for mobile auto detailing in Schaumburg, Elgin, Naperville, Arlington Heights, Wheaton and the Chicago suburbs. Call, email or request a quote online.",
+    "Contact Neat Touch Auto Spa for mobile auto detailing in Naperville, Aurora, Oswego, Lombard, Glenview, Deerfield and the Chicago suburbs. Call, email or request a quote online.",
   path: "/contact",
   keywords: [
     "contact mobile auto detailing Chicago suburbs",
-    "mobile detailing quote Schaumburg",
+    "mobile detailing quote Naperville",
     "book car detailing near me",
   ],
 });

@@ -37,11 +37,12 @@ export const SEO_KEYWORDS = [
   "auto detailing near me",
   "interior car detailing near me",
   "exterior car detailing near me",
-  "mobile detailing Schaumburg IL",
-  "mobile detailing Elgin IL",
   "mobile detailing Naperville IL",
-  "mobile detailing Arlington Heights IL",
-  "mobile detailing Wheaton IL",
+  "mobile detailing Aurora IL",
+  "mobile detailing Oswego IL",
+  "mobile detailing Lombard IL",
+  "mobile detailing Glenview IL",
+  "mobile detailing Deerfield IL",
   "pet hair removal car detailing",
   "seat shampoo car detailing",
   "carpet extraction auto detailing",
@@ -58,27 +59,63 @@ export const STATS = [
   { value: "100%", label: "Mobile Service" },
 ];
 
+// Priority markets — chosen from real Thumbtack lead & conversion data, not
+// guesswork. Each city carries a unique `localNote` so its service pages read
+// differently from every other city's (avoids duplicate/doorway content).
 export const CITIES = [
   {
-    name: "Schaumburg",
-    slug: "schaumburg",
-    county: "Cook and DuPage County",
-    nearby: ["Hoffman Estates", "Roselle", "Rolling Meadows", "Elk Grove Village"],
-    zips: ["60173", "60193", "60194", "60195"],
+    name: "Naperville",
+    slug: "naperville",
+    county: "DuPage and Will County",
+    nearby: ["Aurora", "Lisle", "Warrenville", "Bolingbrook"],
+    zips: ["60540", "60563", "60564", "60565"],
+    localNote:
+      "From condos near downtown Naperville and the Riverwalk to family homes in Ashwood Park and White Eagle, we handle the winter road salt and everyday family mess Naperville interiors collect.",
   },
   {
-    name: "Elgin",
-    slug: "elgin",
-    county: "Kane and Cook County",
-    nearby: ["South Elgin", "Bartlett", "Streamwood", "Carpentersville"],
-    zips: ["60120", "60123", "60124"],
+    name: "Aurora",
+    slug: "aurora",
+    county: "Kane, DuPage, Kendall and Will County",
+    nearby: ["Naperville", "Montgomery", "North Aurora", "Oswego"],
+    zips: ["60502", "60503", "60504", "60505", "60506"],
+    localNote:
+      "Aurora is Illinois' second-largest city and we cover it end to end — from the Fox Valley Mall area and the Orchard Road corridor to historic downtown near the Paramount Theatre.",
   },
   {
-    name: "St. Charles",
-    slug: "st-charles",
-    county: "Kane County",
-    nearby: ["Geneva", "Wayne", "Campton Hills", "South Elgin"],
-    zips: ["60174", "60175"],
+    name: "Oswego",
+    slug: "oswego",
+    county: "Kendall County",
+    nearby: ["Aurora", "Montgomery", "Yorkville", "Plainfield"],
+    zips: ["60543"],
+    localNote:
+      "Oswego is one of our highest-satisfaction areas — local families regularly book full interior details and pet hair removal for their SUVs near downtown Oswego and along the Route 34 corridor.",
+  },
+  {
+    name: "Lombard",
+    slug: "lombard",
+    county: "DuPage County",
+    nearby: ["Villa Park", "Glen Ellyn", "Addison", "Downers Grove"],
+    zips: ["60148"],
+    localNote:
+      "From homes near Lilacia Park to commuters along Roosevelt Road and drivers around Yorktown Center, Lombard interiors take a beating from daily DuPage commuting and winter salt.",
+  },
+  {
+    name: "Glenview",
+    slug: "glenview",
+    county: "Cook County",
+    nearby: ["Northbrook", "Wilmette", "Golf", "Morton Grove"],
+    zips: ["60025", "60026"],
+    localNote:
+      "From The Glen Town Center to established neighborhoods near Wagner Farm, Glenview drivers rely on us to keep leather and cloth interiors looking their best year-round.",
+  },
+  {
+    name: "Deerfield",
+    slug: "deerfield",
+    county: "Lake County",
+    nearby: ["Highland Park", "Northbrook", "Riverwoods", "Bannockburn"],
+    zips: ["60015"],
+    localNote:
+      "We serve Deerfield homes and businesses from Deerfield Square to the neighborhoods off Waukegan and Lake Cook Road, where winter salt and slush are hard on carpets and floor mats.",
   },
   {
     name: "Geneva",
@@ -86,34 +123,8 @@ export const CITIES = [
     county: "Kane County",
     nearby: ["Batavia", "St. Charles", "North Aurora", "West Chicago"],
     zips: ["60134"],
-  },
-  {
-    name: "Batavia",
-    slug: "batavia",
-    county: "Kane and DuPage County",
-    nearby: ["Geneva", "North Aurora", "Aurora", "Warrenville"],
-    zips: ["60510"],
-  },
-  {
-    name: "Naperville",
-    slug: "naperville",
-    county: "DuPage and Will County",
-    nearby: ["Aurora", "Lisle", "Warrenville", "Bolingbrook"],
-    zips: ["60540", "60563", "60564", "60565"],
-  },
-  {
-    name: "Arlington Heights",
-    slug: "arlington-heights",
-    county: "Cook County",
-    nearby: ["Mount Prospect", "Rolling Meadows", "Palatine", "Prospect Heights"],
-    zips: ["60004", "60005"],
-  },
-  {
-    name: "Barrington",
-    slug: "barrington",
-    county: "Cook and Lake County",
-    nearby: ["South Barrington", "Lake Zurich", "Inverness", "Hoffman Estates"],
-    zips: ["60010"],
+    localNote:
+      "Geneva's tree-lined streets near Third Street and the Fox River look great, but pollen, mud and winter salt still find their way into your cabin — that's where we come in.",
   },
   {
     name: "Dundee",
@@ -121,21 +132,22 @@ export const CITIES = [
     county: "Kane County",
     nearby: ["East Dundee", "West Dundee", "Carpentersville", "Algonquin"],
     zips: ["60118"],
+    localNote:
+      "We serve both East and West Dundee along the Fox River, where winter road salt and river-town dust are the most common reasons local drivers book an interior detail.",
   },
-  {
-    name: "Wheaton",
-    slug: "wheaton",
-    county: "DuPage County",
-    nearby: ["Glen Ellyn", "Winfield", "Carol Stream", "Lisle"],
-    zips: ["60187", "60189"],
-  },
-  {
-    name: "Highland Park",
-    slug: "highland-park",
-    county: "Lake County",
-    nearby: ["Deerfield", "Lake Forest", "Glencoe", "Northbrook"],
-    zips: ["60035"],
-  },
+];
+
+// Cities we previously had dedicated pages for but removed based on lead data.
+// Their old URLs are 301-redirected to /service-areas (see next.config).
+export const RETIRED_CITY_SLUGS = [
+  "schaumburg",
+  "elgin",
+  "st-charles",
+  "batavia",
+  "arlington-heights",
+  "barrington",
+  "wheaton",
+  "highland-park",
 ];
 
 export const SERVICES = [

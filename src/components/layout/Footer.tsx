@@ -119,14 +119,14 @@ export function Footer() {
             <h3 className="text-white font-semibold text-sm uppercase tracking-wider mb-4">Services</h3>
             <ul className="flex flex-col gap-2 text-sm">
               {[
-                { label: "Full Interior Detail", href: "/services/full-interior/schaumburg" },
-                { label: "Exterior Add-Ons", href: "/services/exterior-addons/schaumburg" },
-                { label: "Interior Deep Cleaning", href: "/services/interior-deep-clean/schaumburg" },
-                { label: "Pet Hair Removal", href: "/services/pet-hair-removal/schaumburg" },
-                { label: "Seat Shampoo", href: "/services/seat-shampoo/schaumburg" },
-                { label: "Carpet Extraction", href: "/services/carpet-extraction/schaumburg" },
-                { label: "Odor Removal", href: "/services/odor-removal/schaumburg" },
-                { label: "Leather Cleaning & Conditioning", href: "/services/leather-care/schaumburg" },
+                { label: "Full Interior Detail", href: "/services/full-interior/naperville" },
+                { label: "Exterior Add-Ons", href: "/services/exterior-addons/naperville" },
+                { label: "Interior Deep Cleaning", href: "/services/interior-deep-clean/naperville" },
+                { label: "Pet Hair Removal", href: "/services/pet-hair-removal/naperville" },
+                { label: "Seat Shampoo", href: "/services/seat-shampoo/naperville" },
+                { label: "Carpet Extraction", href: "/services/carpet-extraction/naperville" },
+                { label: "Odor Removal", href: "/services/odor-removal/naperville" },
+                { label: "Leather Cleaning & Conditioning", href: "/services/leather-care/naperville" },
               ].map((s) => (
                 <li key={s.href}>
                   <Link href={s.href} className="hover:text-[#C9A84C] transition-colors">

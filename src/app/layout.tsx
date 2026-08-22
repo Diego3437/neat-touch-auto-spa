@@ -54,7 +54,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: `${BUSINESS.name} | Mobile Auto Detailing Chicago Suburbs`,
     description:
-      "Professional mobile auto detailing at your home or office in Schaumburg, Elgin, Naperville, Arlington Heights, Wheaton and surrounding Chicago suburbs.",
+      "Professional mobile auto detailing at your home or office in Naperville, Aurora, Oswego, Lombard, Glenview, Deerfield and surrounding Chicago suburbs.",
     url: BUSINESS.url,
     siteName: BUSINESS.name,
     type: "website",
@@ -72,7 +72,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: `${BUSINESS.name} | Mobile Auto Detailing Chicago Suburbs`,
     description:
-      "Premium mobile auto detailing serving Schaumburg, Elgin, Naperville, Arlington Heights and nearby Chicago suburbs.",
+      "Premium mobile auto detailing serving Naperville, Aurora, Oswego, Lombard, Glenview, Deerfield and nearby Chicago suburbs.",
     images: [BUSINESS.ogImage],
   },
 };

@@ -10,12 +10,12 @@ export const revalidate = 3600;
 export const metadata = buildMetadata({
   title: "Service Areas | Mobile Auto Detailing Chicago Suburbs | Neat Touch Auto Spa",
   description:
-    "Mobile auto detailing service areas across the Chicago suburbs, including Schaumburg, Elgin, St. Charles, Geneva, Naperville, Arlington Heights, Barrington, Dundee, Wheaton and Highland Park.",
+    "Mobile auto detailing service areas across the Chicago suburbs, including Naperville, Aurora, Oswego, Lombard, Glenview, Deerfield, Geneva and Dundee — plus surrounding communities.",
   path: "/service-areas",
   keywords: [
     "mobile auto detailing service areas Chicago suburbs",
-    "car detailing Schaumburg Elgin Naperville",
-    "mobile detailing Arlington Heights Wheaton",
+    "car detailing Naperville Aurora Oswego",
+    "mobile detailing Lombard Glenview Deerfield",
   ],
 });
 

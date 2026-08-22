@@ -222,6 +222,9 @@ export default async function LongTailServiceCityPage({ params }: Props) {
               <p className="text-gray-600 leading-relaxed mb-5">
                 {service.description} This service is a strong fit for drivers in {city.name} who want {intent.outcome}, {intent.season}. Instead of driving to a shop or waiting around, you get professional mobile detailing at your location.
               </p>
+              {city.localNote && (
+                <p className="text-gray-600 leading-relaxed mb-5">{city.localNote}</p>
+              )}
               <p className="text-gray-600 leading-relaxed">
                 We bring professional products and equipment. You provide access to a water spigot and a standard 110V outlet near the vehicle. That setup lets us perform a proper mobile detail without cutting corners.
               </p>

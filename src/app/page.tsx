@@ -15,13 +15,13 @@ export const revalidate = 3600;
 export const metadata = buildMetadata({
   title: "Mobile Auto Detailing Chicago Suburbs | Neat Touch Auto Spa",
   description:
-    "Premium mobile interior auto detailing in Schaumburg, Elgin, Naperville, Arlington Heights, Wheaton and the Chicago suburbs. Interior detailing, deep cleaning, carpet & seat shampoo, leather care, pet hair and odor removal at your home.",
+    "Premium mobile interior auto detailing in Naperville, Aurora, Oswego, Lombard, Glenview, Deerfield and the Chicago suburbs. Interior detailing, deep cleaning, carpet & seat shampoo, leather care, pet hair and odor removal at your home.",
   path: "",
   keywords: [
     "mobile auto detailing Chicago suburbs",
-    "car detailing Schaumburg IL",
+    "car detailing Naperville IL",
     "mobile detailing near me",
-    "auto detail Elgin IL",
+    "auto detail Aurora IL",
     "mobile car detailing Naperville IL",
     "interior detailing Chicago suburbs",
   ],
@@ -37,7 +37,7 @@ export default function HomePage() {
             webPageSchema({
               name: "Mobile Auto Detailing Chicago Suburbs",
               description:
-                "Premium mobile auto detailing for drivers throughout Schaumburg, Elgin, Naperville, Arlington Heights, Wheaton and nearby Chicago suburbs.",
+                "Premium mobile auto detailing for drivers throughout Naperville, Aurora, Oswego, Lombard, Glenview, Deerfield and nearby Chicago suburbs.",
               path: "",
             })
           ),

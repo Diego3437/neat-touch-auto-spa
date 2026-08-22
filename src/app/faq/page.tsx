@@ -15,7 +15,7 @@ const FAQS = [
   {
     question: "What Chicago suburbs do you serve?",
     answer:
-      "We serve Schaumburg, Elgin, St. Charles, Geneva, Batavia, Naperville, Arlington Heights, Barrington, Dundee, Wheaton, Highland Park and surrounding suburbs. If your city is nearby, contact us to check availability.",
+      "We serve Naperville, Aurora, Oswego, Lombard, Glenview, Deerfield, Geneva, Dundee and many surrounding Chicago suburbs. If your city is nearby, contact us to check availability.",
   },
   {
     question: "Can you detail my car at an apartment, condo or office?",

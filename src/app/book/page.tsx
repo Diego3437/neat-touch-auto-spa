@@ -10,7 +10,7 @@ export const metadata = buildMetadata({
   path: "/book",
   keywords: [
     "book mobile auto detailing Chicago suburbs",
-    "schedule car detailing Schaumburg",
+    "schedule car detailing Naperville",
     "mobile detail appointment near me",
   ],
 });
