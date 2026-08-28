@@ -39,7 +39,14 @@ export function Header() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
-          <Link href="/" className="flex items-center gap-2">
+          <Link href="/" className="flex items-center gap-2.5 group">
+            <span
+              className="flex items-center justify-center w-9 h-9 rounded-md bg-gradient-to-br from-[#E0C47A] to-[#C9A84C] text-black font-black text-sm leading-none tracking-tight shadow-sm shadow-[#C9A84C]/30 group-hover:scale-105 transition-transform"
+              style={{ fontFamily: "var(--font-playfair, serif)" }}
+              aria-hidden="true"
+            >
+              NT
+            </span>
             <div className="flex flex-col leading-none">
               <span
                 className="text-white text-lg font-bold tracking-tight"

@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { Phone, ChevronDown, Star, ShieldCheck, MapPin, Award } from "lucide-react";
 import { BUSINESS, STATS } from "@/lib/constants";
+import { CountUp } from "@/components/ui/CountUp";
 
 export function HeroSection() {
   return (
@@ -122,7 +123,7 @@ export function HeroSection() {
           {STATS.map((stat) => (
             <div key={stat.label} className="px-4 py-5 text-center">
               <div className="text-2xl md:text-3xl font-bold gold-text-gradient">
-                {stat.value}
+                <CountUp value={stat.value} />
               </div>
               <div className="text-gray-400 text-[11px] md:text-xs uppercase tracking-wider mt-1">
                 {stat.label}

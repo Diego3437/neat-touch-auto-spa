@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { SectionHeader } from "@/components/ui/SectionHeader";
+import { Reveal } from "@/components/ui/Reveal";
 
 const WORK = [
   {
@@ -57,9 +58,10 @@ export function BeforeAfterGallery() {
         />
 
         <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3">
-          {WORK.map((item) => (
-            <div
+          {WORK.map((item, i) => (
+            <Reveal
               key={item.src}
+              delay={(i % 4) * 90}
               className="group relative overflow-hidden rounded-lg border border-gray-800"
             >
               <div className="relative aspect-[4/5]">
@@ -78,7 +80,7 @@ export function BeforeAfterGallery() {
                   <p className="text-white text-xs font-medium leading-tight">{item.label}</p>
                 </div>
               </div>
-            </div>
+            </Reveal>
           ))}
         </div>
 

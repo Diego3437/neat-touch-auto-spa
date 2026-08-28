@@ -1,7 +1,7 @@
-import Image from "next/image";
 import Link from "next/link";
 import { buildMetadata } from "@/lib/metadata";
 import { CTASection } from "@/components/sections/CTASection";
+import { GalleryLightbox } from "@/components/sections/GalleryLightbox";
 
 export const revalidate = 3600;
 
@@ -80,31 +80,7 @@ export default function GalleryPage() {
       {/* Gallery */}
       <section className="bg-white section-padding">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-            {GALLERY_ITEMS.map((item) => (
-              <div
-                key={item.src}
-                className="group relative overflow-hidden rounded-lg border border-gray-200"
-              >
-                <div className="relative aspect-[3/4]">
-                  <Image
-                    src={item.src}
-                    alt={item.alt}
-                    fill
-                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                    className="object-cover transition-transform duration-500 group-hover:scale-105"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent" />
-                  <div className="absolute bottom-0 left-0 right-0 p-4">
-                    <span className="text-[#C9A84C] text-[11px] font-semibold uppercase tracking-widest block mb-1">
-                      Interior Detail
-                    </span>
-                    <p className="text-white text-sm font-medium">{item.label}</p>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
+          <GalleryLightbox items={GALLERY_ITEMS} />
 
           <p className="text-center text-gray-500 text-sm mt-10">
             More photos added after every detail.{" "}
