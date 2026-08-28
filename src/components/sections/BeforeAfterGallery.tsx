@@ -5,8 +5,8 @@ import { SectionHeader } from "@/components/ui/SectionHeader";
 const WORK = [
   {
     src: "/gallery/porsche-exterior.jpg",
-    label: "Porsche Taycan, Detailed On-Site",
-    alt: "White Porsche Taycan Turbo S detailed in a Chicago suburbs driveway",
+    label: "Porsche Taycan in Naperville",
+    alt: "White Porsche Taycan Turbo S detailed on-site in a Naperville, IL driveway",
   },
   {
     src: "/gallery/porsche-front.jpg",

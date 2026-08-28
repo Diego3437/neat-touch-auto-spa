@@ -18,7 +18,7 @@ export const BUSINESS = {
     instagram: "https://www.instagram.com/neattouchautospa",
     tiktok: "https://www.tiktok.com/@neat.touch.auto.sp",
   },
-  rating: { value: 5.0, count: 18 },
+  rating: { value: 5.0, count: 19 },
   thumbtack: {
     url: "https://www.thumbtack.com/profile/services/548908778321674240/",
     reviews: 54,
@@ -54,7 +54,7 @@ export const SEO_KEYWORDS = [
 // Headline stats used in the hero and trust sections
 export const STATS = [
   { value: "100+", label: "Vehicles Detailed" },
-  { value: "5.0★", label: "18 Google Reviews" },
+  { value: "5.0★", label: "19 Google Reviews" },
   { value: "5.0★", label: "54 Thumbtack Reviews" },
   { value: "100%", label: "Mobile Service" },
 ];
@@ -392,6 +392,12 @@ export const ADDONS = [
 
 // Real Google reviews. Add more from your Google Business Profile as you collect them.
 export const REVIEWS = [
+  {
+    name: "A.S.",
+    meta: "Verified Google review · Naperville, IL",
+    rating: 5,
+    text: "Great work. Punctual, easy to communicate with, and overall great efficient work on both interior and exterior of my vehicle.",
+  },
   {
     name: "Zach Sweeney",
     meta: "Verified Google review · Geneva, IL",

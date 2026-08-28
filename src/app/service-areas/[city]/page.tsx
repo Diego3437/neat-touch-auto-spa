@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { Check, Phone, Star } from "lucide-react";
 import Link from "next/link";
+import Image from "next/image";
 import { CITIES, SERVICES, BUSINESS, SERVICE_PAGE_EXCLUDED } from "@/lib/constants";
 import { localBusinessSchema, faqSchema, breadcrumbSchema, webPageSchema } from "@/lib/schema";
 import { CTASection } from "@/components/sections/CTASection";
@@ -671,8 +672,19 @@ const CITY_SECTIONS: Record<
 };
 
 // Real, verified customer testimonials tied to a specific city. Only add a city
-// here when there is a genuine review from a customer in that city.
-const CITY_TESTIMONIALS: Record<string, { name: string; text: string; meta: string }> = {
+// here when there is a genuine review from a customer in that city. Optional
+// image shows a real photo of that city's job alongside the quote.
+const CITY_TESTIMONIALS: Record<
+  string,
+  { name: string; text: string; meta: string; image?: string; imageAlt?: string }
+> = {
+  naperville: {
+    name: "A.S.",
+    text: "Great work. Punctual, easy to communicate with, and overall great efficient work on both interior and exterior of my vehicle.",
+    meta: "Verified Google review · Naperville, IL",
+    image: "/gallery/porsche-exterior.jpg",
+    imageAlt: "White Porsche Taycan Turbo S detailed on-site in a Naperville, IL driveway",
+  },
   geneva: {
     name: "Zach Sweeney",
     text: "Diego was great! Car looks amazing and smells great! Really appreciated him coming all the way to Geneva. Will be using him again on my wife's car. Five out of five, highly recommend.",
@@ -876,24 +888,55 @@ export default async function CityPage({ params }: Props) {
         </section>
       )}
 
-      {/* Real local testimonial */}
+      {/* Real local testimonial (with real job photo when available) */}
       {testimonial && (
         <section className="bg-black py-16 border-y border-[#C9A84C]/20">
-          <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <div className="flex justify-center gap-1 mb-5">
-              {Array.from({ length: 5 }).map((_, i) => (
-                <Star key={i} size={20} className="text-[#C9A84C] fill-[#C9A84C]" />
-              ))}
+          {testimonial.image ? (
+            <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center">
+                <div className="relative aspect-[4/3] rounded-2xl overflow-hidden border border-[#C9A84C]/25">
+                  <Image
+                    src={testimonial.image}
+                    alt={testimonial.imageAlt || `Detailing work in ${cityData.name}, IL`}
+                    fill
+                    sizes="(max-width: 768px) 100vw, 50vw"
+                    className="object-cover"
+                  />
+                </div>
+                <div>
+                  <div className="flex gap-1 mb-5">
+                    {Array.from({ length: 5 }).map((_, i) => (
+                      <Star key={i} size={20} className="text-[#C9A84C] fill-[#C9A84C]" />
+                    ))}
+                  </div>
+                  <p
+                    className="text-xl md:text-2xl text-white leading-relaxed mb-6"
+                    style={{ fontFamily: "var(--font-playfair, serif)" }}
+                  >
+                    &ldquo;{testimonial.text}&rdquo;
+                  </p>
+                  <p className="text-white font-semibold">{testimonial.name}</p>
+                  <p className="text-gray-500 text-sm mt-1">{testimonial.meta}</p>
+                </div>
+              </div>
             </div>
-            <p
-              className="text-xl md:text-2xl text-white leading-relaxed mb-6"
-              style={{ fontFamily: "var(--font-playfair, serif)" }}
-            >
-              &ldquo;{testimonial.text}&rdquo;
-            </p>
-            <p className="text-white font-semibold">{testimonial.name}</p>
-            <p className="text-gray-500 text-sm mt-1">{testimonial.meta}</p>
-          </div>
+          ) : (
+            <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+              <div className="flex justify-center gap-1 mb-5">
+                {Array.from({ length: 5 }).map((_, i) => (
+                  <Star key={i} size={20} className="text-[#C9A84C] fill-[#C9A84C]" />
+                ))}
+              </div>
+              <p
+                className="text-xl md:text-2xl text-white leading-relaxed mb-6"
+                style={{ fontFamily: "var(--font-playfair, serif)" }}
+              >
+                &ldquo;{testimonial.text}&rdquo;
+              </p>
+              <p className="text-white font-semibold">{testimonial.name}</p>
+              <p className="text-gray-500 text-sm mt-1">{testimonial.meta}</p>
+            </div>
+          )}
         </section>
       )}
 

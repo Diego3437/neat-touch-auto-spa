@@ -16,8 +16,8 @@ export const metadata = buildMetadata({
 const GALLERY_ITEMS = [
   {
     src: "/gallery/porsche-exterior.jpg",
-    label: "Porsche Taycan detailed on-site",
-    alt: "White Porsche Taycan Turbo S detailed in a Chicago suburbs driveway",
+    label: "Porsche Taycan detailed in Naperville",
+    alt: "White Porsche Taycan Turbo S detailed on-site in a Naperville, IL driveway",
   },
   {
     src: "/gallery/porsche-front.jpg",

@@ -15,11 +15,11 @@ export function FeaturedWork() {
               className="text-3xl md:text-4xl font-bold text-white mb-5"
               style={{ fontFamily: "var(--font-playfair, serif)" }}
             >
-              A Porsche Taycan, Detailed in the Driveway
+              A Porsche Taycan, Detailed in Naperville
             </h2>
             <p className="text-gray-400 leading-relaxed mb-6">
-              No shop, no drop-off. This Porsche Taycan Turbo S got our full interior
-              treatment right at the client&apos;s home in the Chicago suburbs — leather
+              No shop, no drop-off. This Porsche Taycan Turbo S got the full treatment right
+              at the client&apos;s home in Naperville, IL — interior and exterior — leather
               cleaned and conditioned, carpets and mats detailed, glass and trim finished.
               We bring the same care to every vehicle, from daily drivers to exotics.
             </p>
