@@ -23,6 +23,10 @@ body {
 
 html {
   scroll-behavior: smooth;
+  /* Always reserve the scrollbar gutter so centered content never shifts
+     sideways when the vertical scrollbar appears/disappears (fixes the
+     "body moving on the sides" jitter, e.g. on the Book page). */
+  scrollbar-gutter: stable;
 }
 
 * {
