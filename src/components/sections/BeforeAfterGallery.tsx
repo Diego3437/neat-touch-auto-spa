@@ -4,6 +4,16 @@ import { SectionHeader } from "@/components/ui/SectionHeader";
 
 const WORK = [
   {
+    src: "/gallery/porsche-exterior.jpg",
+    label: "Porsche Taycan, Detailed On-Site",
+    alt: "White Porsche Taycan Turbo S detailed in a Chicago suburbs driveway",
+  },
+  {
+    src: "/gallery/porsche-front.jpg",
+    label: "Exotic Interior Care",
+    alt: "Clean black leather interior and dashboard of a Porsche Taycan",
+  },
+  {
     src: "/gallery/merc-exterior.jpg",
     label: "We Come to Your Driveway",
     alt: "White Mercedes GLB detailed on-site in a Chicago suburbs driveway",

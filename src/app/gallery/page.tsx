@@ -15,6 +15,21 @@ export const metadata = buildMetadata({
 
 const GALLERY_ITEMS = [
   {
+    src: "/gallery/porsche-exterior.jpg",
+    label: "Porsche Taycan detailed on-site",
+    alt: "White Porsche Taycan Turbo S detailed in a Chicago suburbs driveway",
+  },
+  {
+    src: "/gallery/porsche-front.jpg",
+    label: "Exotic interior care",
+    alt: "Clean black leather interior and dashboard of a Porsche Taycan",
+  },
+  {
+    src: "/gallery/porsche-backseat.jpg",
+    label: "Every seat, every detail",
+    alt: "Detailed black leather rear seats and Porsche floor mats in a Porsche Taycan",
+  },
+  {
     src: "/gallery/merc-exterior.jpg",
     label: "We come to your driveway",
     alt: "White Mercedes GLB detailed on-site in a Chicago suburbs driveway",

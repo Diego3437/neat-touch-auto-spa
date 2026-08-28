@@ -3,6 +3,7 @@ import { TrustBadges } from "@/components/sections/TrustBadges";
 import { ServiceHighlights } from "@/components/sections/ServiceHighlights";
 import { MobileSetupSection } from "@/components/sections/MobileSetupSection";
 import { BeforeAfterGallery } from "@/components/sections/BeforeAfterGallery";
+import { FeaturedWork } from "@/components/sections/FeaturedWork";
 import { ServiceAreaMap } from "@/components/sections/ServiceAreaMap";
 import { ReviewsSection } from "@/components/sections/ReviewsSection";
 import { CTASection } from "@/components/sections/CTASection";
@@ -56,6 +57,7 @@ export default function HomePage() {
       <ServiceHighlights />
       <MobileSetupSection />
       <BeforeAfterGallery />
+      <FeaturedWork />
       <ServiceAreaMap />
       <ReviewsSection dark />
       <CTASection />
