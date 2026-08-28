@@ -5,19 +5,29 @@ import { BUSINESS, STATS } from "@/lib/constants";
 export function HeroSection() {
   return (
     <section className="relative min-h-[100svh] flex items-center justify-center bg-black overflow-hidden grain">
-      {/* Animated gradient base */}
-      <div className="absolute inset-0 bg-gradient-to-br from-black via-[#0d0d0d] to-black" />
+      {/* Background video */}
+      <video
+        className="absolute inset-0 w-full h-full object-cover"
+        autoPlay
+        muted
+        loop
+        playsInline
+        preload="metadata"
+        poster="/video/porsche-taycan-poster.jpg"
+      >
+        <source src="/video/porsche-taycan.mp4" type="video/mp4" />
+      </video>
+
+      {/* Dark overlays for legibility */}
+      <div className="absolute inset-0 bg-black/60" />
+      <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/40 to-black/90" />
       <div
-        className="absolute inset-0 opacity-40 animate-gradient-pan"
+        className="absolute inset-0 opacity-40"
         style={{
           background:
-            "radial-gradient(circle at 20% 30%, rgba(201,168,76,0.15), transparent 45%), radial-gradient(circle at 80% 70%, rgba(201,168,76,0.10), transparent 40%)",
+            "radial-gradient(circle at 50% 42%, rgba(201,168,76,0.12), transparent 55%)",
         }}
       />
-
-      {/* Floating gold orbs */}
-      <div className="absolute top-1/4 right-[15%] w-80 h-80 md:w-96 md:h-96 rounded-full bg-[#C9A84C] opacity-[0.07] blur-3xl pointer-events-none animate-float-slow" />
-      <div className="absolute bottom-1/4 left-[12%] w-56 h-56 md:w-72 md:h-72 rounded-full bg-[#C9A84C] opacity-[0.06] blur-3xl pointer-events-none animate-float-slower" />
 
       {/* Gold accent lines */}
       <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-[#C9A84C] to-transparent opacity-60" />
