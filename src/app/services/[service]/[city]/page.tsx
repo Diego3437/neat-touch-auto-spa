@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { CheckCircle, MapPin, Phone } from "lucide-react";
-import { BUSINESS, CITIES, SERVICES } from "@/lib/constants";
+import { BUSINESS, CITIES, SERVICES, SERVICE_PAGE_EXCLUDED } from "@/lib/constants";
 import { buildMetadata } from "@/lib/metadata";
 import {
   breadcrumbSchema,
@@ -104,7 +104,7 @@ function buildFaqs(serviceName: string, cityName: string) {
 
 export async function generateStaticParams() {
   return SERVICES.flatMap((service) =>
-    CITIES.map((city) => ({
+    CITIES.filter((city) => !SERVICE_PAGE_EXCLUDED.includes(city.slug)).map((city) => ({
       service: service.id,
       city: city.slug,
     }))

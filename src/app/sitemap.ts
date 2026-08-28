@@ -1,5 +1,5 @@
 import { MetadataRoute } from "next";
-import { BUSINESS, CITIES, SERVICES } from "@/lib/constants";
+import { BUSINESS, CITIES, SERVICES, SERVICE_PAGE_EXCLUDED } from "@/lib/constants";
 import { BLOG_POSTS } from "@/data/blog-posts";
 
 const BASE_URL = "https://www.neattouchautospa.com";
@@ -36,7 +36,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   }));
 
   const serviceCityPages = SERVICES.flatMap((service) =>
-    CITIES.map((city) => ({
+    CITIES.filter((city) => !SERVICE_PAGE_EXCLUDED.includes(city.slug)).map((city) => ({
       url: `${BASE_URL}/services/${service.id}/${city.slug}`,
       lastModified: LAST_MODIFIED,
       changeFrequency: "monthly" as const,

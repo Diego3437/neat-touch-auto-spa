@@ -175,12 +175,27 @@ export const CITIES = [
         "We cover East Dundee, West Dundee and the areas near Carpentersville and Algonquin.",
     },
   },
+  {
+    // Test market — high Search Console impressions. Landing page only (no
+    // per-service pages yet); see SERVICE_PAGE_EXCLUDED below.
+    name: "Schaumburg",
+    slug: "schaumburg",
+    county: "Cook and DuPage County",
+    nearby: ["Hoffman Estates", "Roselle", "Rolling Meadows", "Elk Grove Village"],
+    zips: ["60173", "60193", "60194", "60195"],
+    localNote:
+      "In Schaumburg we detail everything from homes near Woodfield Mall to condos and corporate lots off I-90 — busy commuters and family SUVs that pick up plenty of dust, road salt and everyday mess.",
+    localFaq: {
+      question: "Do you serve the whole Schaumburg area?",
+      answer:
+        "Yes — we serve all of Schaumburg, from the Woodfield Mall area to residential neighborhoods and corporate parks off I-90, plus nearby Hoffman Estates, Roselle and Rolling Meadows.",
+    },
+  },
 ];
 
-// Cities we previously had dedicated pages for but removed based on lead data.
-// Their old URLs are 301-redirected to /service-areas (see next.config).
+// Cities we removed dedicated pages for based on lead data. Old URLs
+// 301/308-redirect to /service-areas (see next.config).
 export const RETIRED_CITY_SLUGS = [
-  "schaumburg",
   "elgin",
   "st-charles",
   "batavia",
@@ -189,6 +204,10 @@ export const RETIRED_CITY_SLUGS = [
   "wheaton",
   "highland-park",
 ];
+
+// Cities that have a service-area landing page but NOT per-service pages
+// (/services/[service]/[city]). Used to keep a light test footprint.
+export const SERVICE_PAGE_EXCLUDED = ["schaumburg"];
 
 export const SERVICES = [
   {

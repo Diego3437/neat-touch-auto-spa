@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { Check, Phone, Star } from "lucide-react";
 import Link from "next/link";
-import { CITIES, SERVICES, BUSINESS } from "@/lib/constants";
+import { CITIES, SERVICES, BUSINESS, SERVICE_PAGE_EXCLUDED } from "@/lib/constants";
 import { localBusinessSchema, faqSchema, breadcrumbSchema, webPageSchema } from "@/lib/schema";
 import { CTASection } from "@/components/sections/CTASection";
 import { buildMetadata } from "@/lib/metadata";
@@ -643,6 +643,31 @@ const CITY_SECTIONS: Record<
       },
     ],
   },
+  schaumburg: {
+    neighborhoods: [
+      "Near Woodfield Mall",
+      "Corporate parks off I-90",
+      "Town Square Schaumburg",
+      "Weathersfield",
+      "Near the Schaumburg Metra station",
+      "Hoffman Estates & Roselle borders",
+    ],
+    sections: [
+      {
+        title: "Mobile Interior Detailing Across Schaumburg",
+        paragraphs: [
+          "Schaumburg is one of the Northwest suburbs' busiest hubs, mixing dense neighborhoods with the Woodfield Mall area and corporate campuses off I-90. Between long commutes and family driving, Schaumburg cabins pick up plenty of dust, road salt, and everyday mess.",
+          "Neat Touch Auto Spa brings the full interior detail to your Schaumburg home or office — vacuum, seats, carpets, dash, glass, and leather conditioning — so you never have to drop your car off or sit in a waiting room. Many corporate clients have us detail their vehicle right in the office lot during the workday.",
+        ],
+      },
+      {
+        title: "Transparent Schaumburg Pricing",
+        paragraphs: [
+          "No travel surcharge for Schaumburg: a Full Interior Detail is $220 for sedans and $240 for SUVs and larger vehicles, and the Interior + Exterior package is $300 (sedan) or $320 (SUV), adding a hand wash, spray wax, tire shine, and exterior windows.",
+        ],
+      },
+    ],
+  },
 };
 
 // Real, verified customer testimonials tied to a specific city. Only add a city
@@ -710,6 +735,7 @@ export default async function CityPage({ params }: Props) {
   const faqs = CITY_FAQS[city] || DEFAULT_FAQS;
   const deepContent = CITY_SECTIONS[city];
   const testimonial = CITY_TESTIMONIALS[city];
+  const hasServicePages = !SERVICE_PAGE_EXCLUDED.includes(city);
 
   const schemaLD = {
     ...localBusinessSchema(cityData.name),
@@ -890,7 +916,7 @@ export default async function CityPage({ params }: Props) {
             {SERVICES.slice(0, 6).map((service) => (
               <Link
                 key={service.id}
-                href={`/services/${service.id}/${city}`}
+                href={hasServicePages ? `/services/${service.id}/${city}` : "/services"}
                 className="border border-gray-200 hover:border-[#C9A84C] p-6 transition-colors duration-200"
               >
                 <h3 className="text-black font-semibold text-base mb-2">{service.name}</h3>

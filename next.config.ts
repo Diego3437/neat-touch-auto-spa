@@ -1,10 +1,8 @@
 import type { NextConfig } from "next";
 
-// Cities we removed dedicated pages for (based on real lead data). Their old
-// URLs are permanently redirected to the general service-areas page so no link
-// equity is lost and there are no 404s.
+// Cities we removed dedicated pages for (based on real lead data). Both their
+// landing and per-service URLs are permanently redirected to /service-areas.
 const RETIRED_CITY_SLUGS = [
-  "schaumburg",
   "elgin",
   "st-charles",
   "batavia",
@@ -14,20 +12,31 @@ const RETIRED_CITY_SLUGS = [
   "highland-park",
 ];
 
+// Cities with a landing page but no per-service pages: keep the landing live,
+// but redirect any /services/:service/[city] URL back to the city landing.
+const LANDING_ONLY_CITY_SLUGS = ["schaumburg"];
+
 const nextConfig: NextConfig = {
   async redirects() {
-    return RETIRED_CITY_SLUGS.flatMap((slug) => [
-      {
-        source: `/service-areas/${slug}`,
-        destination: "/service-areas",
-        permanent: true,
-      },
-      {
+    return [
+      ...RETIRED_CITY_SLUGS.flatMap((slug) => [
+        {
+          source: `/service-areas/${slug}`,
+          destination: "/service-areas",
+          permanent: true,
+        },
+        {
+          source: `/services/:service/${slug}`,
+          destination: "/service-areas",
+          permanent: true,
+        },
+      ]),
+      ...LANDING_ONLY_CITY_SLUGS.map((slug) => ({
         source: `/services/:service/${slug}`,
-        destination: "/service-areas",
+        destination: `/service-areas/${slug}`,
         permanent: true,
-      },
-    ]);
+      })),
+    ];
   },
   images: {
     formats: ["image/avif", "image/webp"],
