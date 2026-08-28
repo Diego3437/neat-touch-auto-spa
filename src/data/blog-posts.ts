@@ -11,6 +11,77 @@ export interface BlogPost {
 
 export const BLOG_POSTS: BlogPost[] = [
   {
+    slug: "how-much-does-car-detailing-cost-naperville",
+    title: "How Much Does Car Detailing Cost in Naperville, IL?",
+    date: "2026-08-27",
+    excerpt:
+      "A straight, transparent answer to what car detailing costs in Naperville — real prices for interior and interior + exterior, what changes the price, and what's included.",
+    metaTitle: "How Much Does Car Detailing Cost in Naperville, IL? | Neat Touch Auto Spa",
+    metaDescription:
+      "Car detailing prices in Naperville, IL: interior detailing from $220, interior + exterior from $300. See what's included, what affects the cost, and how long it takes.",
+    tags: ["Naperville", "pricing", "car detailing cost"],
+    content: `
+# How Much Does Car Detailing Cost in Naperville, IL?
+
+If you've searched "car detailing cost Naperville" or "average cost of car detailing near me," you've probably found a frustrating range of answers. Prices swing wildly because "detailing" means very different things at different shops. This guide gives you a straight answer for Naperville — real prices, what's included, and what actually changes the cost.
+
+## Car Detailing Prices in Naperville (At a Glance)
+
+At Neat Touch Auto Spa, our pricing is simple and the same across every suburb we serve — there is no travel surcharge for Naperville:
+
+- **Full Interior Detail:** $220 for sedans, $240 for SUVs and larger vehicles
+- **Interior + Exterior:** $300 for sedans, $320 for SUVs and larger vehicles
+
+The Interior + Exterior package adds an exterior hand wash and dry, spray wax, tire cleaning and shine, and exterior windows on top of the complete interior service.
+
+## What's Included in a Full Interior Detail
+
+A real interior detail is much more than a vacuum and a wipe. Our Full Interior Detail covers:
+
+- Complete vacuum — seats, carpets, floor mats, trunk, and crevices
+- Dashboard, center console, cup holders, and vents
+- Door panels and door jambs
+- Interior glass cleaned streak-free
+- Leather seats cleaned and conditioned
+- Trim and plastics dressed and protected
+- Stain and spot treatment
+- Finishing air freshener
+
+## What Changes the Price
+
+A few things can move the final number up or down:
+
+- **Vehicle size.** Sedans are less than SUVs, trucks, and minivans simply because there's less surface area and fewer seats to clean.
+- **Condition.** A lightly used cabin costs less to reset than one with heavy stains, spills, or long-neglected buildup.
+- **Pet hair.** Embedded pet hair takes specialized tools and extra time, so it's a common add-on.
+- **Odors.** Smoke, food, or pet odors that need real treatment (not just an air freshener) add to the job.
+- **Deep stains.** Set-in carpet or seat stains may call for carpet extraction or a seat shampoo.
+
+## Popular Add-Ons in Naperville
+
+Many Naperville drivers add one or more of these to a standard interior detail:
+
+- **Pet hair removal** — for dog and cat owners
+- **Odor treatment** — smoke, pets, food, or mildew
+- **Carpet extraction** — hot-water extraction that pulls salt and staining out of carpet fibers (a big one after winter)
+- **Seat shampoo** — deep cleaning for cloth seats with set-in stains
+
+If you're not sure what your vehicle needs, send us a few photos before booking and we'll give you an honest recommendation — we won't push add-ons you don't need.
+
+## How Long Does It Take?
+
+A Full Interior Detail typically takes about 1.5 to 2 hours depending on vehicle size and condition. Because we're a mobile service, all of that happens in your own driveway or office parking lot — you're not losing a half-day sitting at a shop.
+
+## Is Mobile Detailing More Expensive?
+
+Not with us — you get the full interior detail at the same price, delivered to you. For busy Naperville families and professionals, the time you save not driving to a shop and waiting is often worth more than any price difference either way.
+
+## See Prices and Book in Naperville
+
+You can see everything laid out on our [pricing page](/pricing), and learn more about our [mobile detailing in Naperville](/service-areas/naperville). When you're ready, [book online](/book) or call (464) 249-0177 and we'll come to you.
+    `.trim(),
+  },
+  {
     slug: "mobile-auto-detailing-naperville-il",
     title: "Mobile Auto Detailing in Naperville, IL: A Local's Guide",
     date: "2026-08-18",

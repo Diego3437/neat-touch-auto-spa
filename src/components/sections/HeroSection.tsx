@@ -56,18 +56,17 @@ export function HeroSection() {
           className="animate-fade-up text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white leading-[1.05] mb-6 tracking-tight"
           style={{ fontFamily: "var(--font-playfair, serif)", animationDelay: "80ms" }}
         >
-          Premium Mobile{" "}
-          <span className="gold-text-gradient">Interior Detailing</span>
-          <br className="hidden sm:block" /> at Your Home
+          Mobile Auto Detailing at Your Home in{" "}
+          <span className="gold-text-gradient">Naperville &amp; the Chicago Suburbs</span>
         </h1>
 
         <p
           className="animate-fade-up text-gray-400 text-lg md:text-xl max-w-2xl mx-auto mb-10 leading-relaxed"
           style={{ animationDelay: "160ms" }}
         >
-          We bring premium interior detailing directly to your driveway across
-          Chicago&apos;s affluent suburbs — no waiting rooms, no drop-offs, just a
-          spotless, showroom-fresh interior.
+          Professional interior car detailing — with optional exterior add-ons —
+          brought directly to your driveway, home, or office. No waiting rooms, no
+          drop-offs, just a spotless, showroom-fresh vehicle.
         </p>
 
         <div

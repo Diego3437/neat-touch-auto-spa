@@ -13,7 +13,7 @@ import { breadcrumbSchema, webPageSchema } from "@/lib/schema";
 export const revalidate = 3600;
 
 export const metadata = buildMetadata({
-  title: "Mobile Auto Detailing Chicago Suburbs | Neat Touch Auto Spa",
+  title: "Mobile Auto Detailing in Naperville & Chicago Suburbs | Neat Touch Auto Spa",
   description:
     "Premium mobile interior auto detailing in Naperville, Aurora, Oswego, Lombard, Glenview, Deerfield and the Chicago suburbs. Interior detailing, deep cleaning, carpet & seat shampoo, leather care, pet hair and odor removal at your home.",
   path: "",

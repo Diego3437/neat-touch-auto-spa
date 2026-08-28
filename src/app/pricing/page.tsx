@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { Check } from "lucide-react";
 import { PRICING, ADDONS } from "@/lib/constants";
 import { CTASection } from "@/components/sections/CTASection";
@@ -169,6 +170,44 @@ export default function PricingPage() {
               * Prices are estimates. Final pricing depends on vehicle size, condition, and services selected. Contact us for an exact quote.
             </p>
           </div>
+        </div>
+      </section>
+
+      {/* SEO content — matches "how much does car detailing cost" search intent */}
+      <section className="bg-gray-50 section-padding">
+        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2
+            className="text-3xl font-bold text-black mb-5"
+            style={{ fontFamily: "var(--font-playfair, serif)" }}
+          >
+            How Much Does Mobile Car Detailing Cost?
+          </h2>
+          <p className="text-gray-600 leading-relaxed mb-4">
+            Mobile car detailing prices vary depending on vehicle size, condition, and the
+            services you need. Our Full Interior Detail starts at $220 for sedans and $240 for
+            SUVs and larger vehicles, and our Interior + Exterior package starts at $300. Add-ons
+            like pet hair removal, odor treatment, carpet extraction, and seat shampoo are priced
+            based on what your vehicle needs — and we&apos;ll always give you an honest
+            recommendation before you book.
+          </p>
+          <p className="text-gray-600 leading-relaxed mb-6">
+            Because we come to you, there are no travel surcharges across the Chicago suburbs. Want
+            a full breakdown for your area? Read our guide on{" "}
+            <Link href="/blog/how-much-does-car-detailing-cost-naperville" className="text-[#C9A84C] font-semibold hover:underline">
+              how much car detailing costs in Naperville
+            </Link>{" "}
+            or see our{" "}
+            <Link href="/service-areas/naperville" className="text-[#C9A84C] font-semibold hover:underline">
+              Naperville mobile detailing page
+            </Link>
+            .
+          </p>
+          <Link
+            href="/book"
+            className="inline-block bg-[#C9A84C] hover:bg-[#A07830] text-black font-semibold px-8 py-3 transition-colors"
+          >
+            Get Your Exact Quote
+          </Link>
         </div>
       </section>
 

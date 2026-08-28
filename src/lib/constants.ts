@@ -54,8 +54,8 @@ export const SEO_KEYWORDS = [
 // Headline stats used in the hero and trust sections
 export const STATS = [
   { value: "100+", label: "Vehicles Detailed" },
-  { value: "5.0★", label: "Average Rating" },
-  { value: "11+", label: "Suburbs Served" },
+  { value: "5.0★", label: "18 Google Reviews" },
+  { value: "5.0★", label: "54 Thumbtack Reviews" },
   { value: "100%", label: "Mobile Service" },
 ];
 

@@ -17,6 +17,27 @@ export async function generateStaticParams() {
   return BLOG_POSTS.map((post) => ({ slug: post.slug }));
 }
 
+// Render inline markdown links [label](/href) as real links; plain text otherwise.
+function renderInline(text: string) {
+  const parts: React.ReactNode[] = [];
+  const regex = /\[([^\]]+)\]\(([^)]+)\)/g;
+  let last = 0;
+  let match: RegExpExecArray | null;
+  let key = 0;
+  while ((match = regex.exec(text)) !== null) {
+    if (match.index > last) parts.push(text.slice(last, match.index));
+    const [, label, href] = match;
+    parts.push(
+      <Link key={key++} href={href} className="text-[#C9A84C] font-semibold hover:underline">
+        {label}
+      </Link>
+    );
+    last = match.index + match[0].length;
+  }
+  if (last < text.length) parts.push(text.slice(last));
+  return parts;
+}
+
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
   const post = BLOG_POSTS.find((p) => p.slug === slug);
@@ -139,13 +160,13 @@ export default async function BlogPostPage({ params }: Props) {
               if (line.startsWith("- ")) {
                 return (
                   <li key={i} className="text-gray-600 leading-relaxed ml-4 list-disc mb-1">
-                    {line.replace("- ", "")}
+                    {renderInline(line.replace("- ", ""))}
                   </li>
                 );
               }
               return (
                 <p key={i} className="text-gray-600 leading-relaxed mb-4">
-                  {line}
+                  {renderInline(line)}
                 </p>
               );
             })}
