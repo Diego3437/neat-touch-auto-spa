@@ -58,18 +58,19 @@ export function ServiceHighlights() {
           subtitle="Every service is performed by professionals using industry-grade products and equipment — delivered directly to your location."
         />
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
           {HIGHLIGHTS.map((item, i) => {
             const Icon = ICON_MAP[item.icon] || Car;
             return (
               <Reveal key={item.title} delay={i * 80}>
-                <div className="group relative h-full border border-gray-100 hover:border-[#C9A84C]/60 p-8 rounded-lg bg-white transition-all duration-300 hover:shadow-xl hover:-translate-y-1 overflow-hidden">
-                  <div className="absolute top-0 right-0 w-24 h-24 bg-[#C9A84C]/5 rounded-full blur-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                  <div className="relative w-12 h-12 bg-[#C9A84C]/10 group-hover:bg-[#C9A84C] rounded-lg flex items-center justify-center mb-5 transition-colors duration-300">
-                    <Icon size={22} className="text-[#C9A84C] group-hover:text-black transition-colors duration-300" />
+                <div className="group relative h-full flex items-start gap-4 border border-gray-100 hover:border-[#C9A84C]/60 p-5 rounded-lg bg-white transition-all duration-300 hover:shadow-lg hover:-translate-y-0.5 overflow-hidden">
+                  <div className="relative w-10 h-10 flex-shrink-0 bg-[#C9A84C]/10 group-hover:bg-[#C9A84C] rounded-lg flex items-center justify-center transition-colors duration-300">
+                    <Icon size={18} className="text-[#C9A84C] group-hover:text-black transition-colors duration-300" />
                   </div>
-                  <h3 className="text-black font-semibold text-lg mb-2">{item.title}</h3>
-                  <p className="text-gray-500 text-sm leading-relaxed">{item.desc}</p>
+                  <div>
+                    <h3 className="text-black font-semibold text-base mb-1">{item.title}</h3>
+                    <p className="text-gray-500 text-sm leading-snug">{item.desc}</p>
+                  </div>
                 </div>
               </Reveal>
             );

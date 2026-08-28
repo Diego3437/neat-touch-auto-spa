@@ -21,12 +21,12 @@ const BADGES = [
 export function TrustBadges() {
   return (
     <section className="bg-[#111111] border-y border-gray-800">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-7">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-px bg-gray-800">
           {BADGES.map((badge) => (
             <div
               key={badge.label}
-              className="bg-[#111111] flex flex-col md:flex-row items-center md:items-start gap-4 p-8 text-center md:text-left"
+              className="bg-[#111111] flex flex-col md:flex-row items-center md:items-start gap-4 p-6 text-center md:text-left"
             >
               <div className="flex-shrink-0 w-12 h-12 bg-[#C9A84C]/10 rounded-full flex items-center justify-center">
                 <badge.icon size={22} className="text-[#C9A84C]" />

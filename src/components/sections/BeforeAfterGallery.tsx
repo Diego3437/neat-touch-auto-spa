@@ -14,6 +14,11 @@ const WORK = [
     alt: "Clean black leather interior and dashboard of a Porsche Taycan",
   },
   {
+    src: "/gallery/porsche-backseat.jpg",
+    label: "Every Seat, Every Detail",
+    alt: "Detailed black leather rear seats and Porsche floor mats in a Porsche Taycan",
+  },
+  {
     src: "/gallery/merc-exterior.jpg",
     label: "We Come to Your Driveway",
     alt: "White Mercedes GLB detailed on-site in a Chicago suburbs driveway",
@@ -51,26 +56,26 @@ export function BeforeAfterGallery() {
           light
         />
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3">
           {WORK.map((item) => (
             <div
               key={item.src}
               className="group relative overflow-hidden rounded-lg border border-gray-800"
             >
-              <div className="relative aspect-[3/4]">
+              <div className="relative aspect-[4/5]">
                 <Image
                   src={item.src}
                   alt={item.alt}
                   fill
-                  sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, 33vw"
+                  sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 25vw"
                   className="object-cover transition-transform duration-500 group-hover:scale-105"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/10 to-transparent" />
-                <div className="absolute bottom-0 left-0 right-0 p-4">
-                  <span className="text-[#C9A84C] text-[11px] font-semibold uppercase tracking-widest block mb-1">
+                <div className="absolute bottom-0 left-0 right-0 p-3">
+                  <span className="text-[#C9A84C] text-[10px] font-semibold uppercase tracking-widest block mb-0.5">
                     Interior Detail
                   </span>
-                  <p className="text-white text-sm font-medium">{item.label}</p>
+                  <p className="text-white text-xs font-medium leading-tight">{item.label}</p>
                 </div>
               </div>
             </div>
