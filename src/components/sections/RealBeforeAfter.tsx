@@ -27,21 +27,6 @@ export function RealBeforeAfter() {
           subtitle="Side-by-side photos from real jobs — no stock photos, no filters. This is what your car looks like after a Neat Touch detail."
         />
 
-        <Reveal className="mb-10 flex justify-center">
-          <div className="relative w-full max-w-[300px] aspect-[9/16] rounded-2xl overflow-hidden border border-[#C9A84C]/25 shadow-2xl shadow-black/20">
-            <video
-              className="absolute inset-0 w-full h-full object-cover"
-              autoPlay
-              muted
-              loop
-              playsInline
-              preload="metadata"
-            >
-              <source src="/video/showcase-reel.mp4" type="video/mp4" />
-            </video>
-          </div>
-        </Reveal>
-
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {TRANSFORMATIONS.map((item, i) => (
             <Reveal
