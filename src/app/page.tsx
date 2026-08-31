@@ -4,6 +4,7 @@ import { ServiceHighlights } from "@/components/sections/ServiceHighlights";
 import { MobileSetupSection } from "@/components/sections/MobileSetupSection";
 import { BeforeAfterGallery } from "@/components/sections/BeforeAfterGallery";
 import { FeaturedWork } from "@/components/sections/FeaturedWork";
+import { RealBeforeAfter } from "@/components/sections/RealBeforeAfter";
 import { ServiceAreaMap } from "@/components/sections/ServiceAreaMap";
 import { ReviewsSection } from "@/components/sections/ReviewsSection";
 import { CTASection } from "@/components/sections/CTASection";
@@ -58,6 +59,7 @@ export default function HomePage() {
       <MobileSetupSection />
       <BeforeAfterGallery />
       <FeaturedWork />
+      <RealBeforeAfter />
       <ServiceAreaMap />
       <ReviewsSection dark />
       <CTASection />
