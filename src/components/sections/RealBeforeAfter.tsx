@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import { SectionHeader } from "@/components/ui/SectionHeader";
 import { Reveal } from "@/components/ui/Reveal";
 
@@ -17,9 +18,17 @@ const TRANSFORMATIONS = [
   { vehicle: "Dodge", before: "/gallery/dodge-before.jpg", after: "/gallery/dodge-after.jpg" },
 ];
 
-export function RealBeforeAfter() {
+export function RealBeforeAfter({
+  limit,
+  showViewAll = false,
+}: {
+  limit?: number;
+  showViewAll?: boolean;
+}) {
+  const items = limit ? TRANSFORMATIONS.slice(0, limit) : TRANSFORMATIONS;
+
   return (
-    <section className="bg-white section-padding">
+    <section id="before-after" className="bg-white section-padding scroll-mt-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <SectionHeader
           eyebrow="Before & After"
@@ -28,7 +37,7 @@ export function RealBeforeAfter() {
         />
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          {TRANSFORMATIONS.map((item, i) => (
+          {items.map((item, i) => (
             <Reveal
               key={item.before}
               delay={(i % 3) * 90}
@@ -64,6 +73,17 @@ export function RealBeforeAfter() {
             </Reveal>
           ))}
         </div>
+
+        {showViewAll && (
+          <div className="text-center mt-10">
+            <Link
+              href="/gallery#before-after"
+              className="inline-block border-2 border-black hover:border-[#C9A84C] hover:text-[#C9A84C] text-black font-semibold px-8 py-3 transition-colors duration-200"
+            >
+              See All Before &amp; Afters
+            </Link>
+          </div>
+        )}
       </div>
     </section>
   );

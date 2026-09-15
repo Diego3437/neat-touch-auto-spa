@@ -2,7 +2,6 @@ import { HeroSection } from "@/components/sections/HeroSection";
 import { TrustBadges } from "@/components/sections/TrustBadges";
 import { ServiceHighlights } from "@/components/sections/ServiceHighlights";
 import { MobileSetupSection } from "@/components/sections/MobileSetupSection";
-import { BeforeAfterGallery } from "@/components/sections/BeforeAfterGallery";
 import { FeaturedWork } from "@/components/sections/FeaturedWork";
 import { RealBeforeAfter } from "@/components/sections/RealBeforeAfter";
 import { ServiceAreaMap } from "@/components/sections/ServiceAreaMap";
@@ -57,9 +56,8 @@ export default function HomePage() {
       <TrustBadges />
       <ServiceHighlights />
       <MobileSetupSection />
-      <BeforeAfterGallery />
       <FeaturedWork />
-      <RealBeforeAfter />
+      <RealBeforeAfter limit={6} showViewAll />
       <ServiceAreaMap />
       <ReviewsSection dark />
       <CTASection />

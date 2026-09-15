@@ -2,6 +2,7 @@ import Link from "next/link";
 import { buildMetadata } from "@/lib/metadata";
 import { CTASection } from "@/components/sections/CTASection";
 import { GalleryLightbox } from "@/components/sections/GalleryLightbox";
+import { RealBeforeAfter } from "@/components/sections/RealBeforeAfter";
 
 export const revalidate = 3600;
 
@@ -91,6 +92,8 @@ export default function GalleryPage() {
           </p>
         </div>
       </section>
+
+      <RealBeforeAfter />
 
       <CTASection />
     </>
