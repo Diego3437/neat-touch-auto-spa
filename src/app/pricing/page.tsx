@@ -2,6 +2,7 @@ import Link from "next/link";
 import { Check } from "lucide-react";
 import { PRICING, ADDONS, BUSINESS } from "@/lib/constants";
 import { CTASection } from "@/components/sections/CTASection";
+import { PriceEstimator } from "@/components/sections/PriceEstimator";
 import { SectionHeader } from "@/components/ui/SectionHeader";
 import { buildMetadata } from "@/lib/metadata";
 import { breadcrumbSchema, webPageSchema } from "@/lib/schema";
@@ -65,6 +66,9 @@ export default function PricingPage() {
           </p>
         </div>
       </section>
+
+      {/* Instant price estimator */}
+      <PriceEstimator />
 
       {/* Pricing Cards */}
       <section className="bg-white section-padding">
