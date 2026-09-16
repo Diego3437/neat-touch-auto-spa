@@ -156,7 +156,7 @@ export default async function LongTailServiceCityPage({ params }: Props) {
   const schema = {
     "@context": "https://schema.org",
     "@graph": [
-      localBusinessSchema(city.name),
+      localBusinessSchema(),
       webPageSchema({
         name: pageTitle,
         description: `${service.name} mobile detailing in ${city.name}, IL and nearby ${city.nearby.join(", ")}.`,

@@ -10,7 +10,7 @@ const logoUrl = `${BUSINESS.url}${BUSINESS.logo}`;
  * aggregate rating, reviews and offer catalog. This is the single most
  * important block for local SEO and Google rich results.
  */
-export function localBusinessSchema(city?: string) {
+export function localBusinessSchema() {
   return {
     "@context": "https://schema.org",
     "@type": ["AutoWash", "LocalBusiness"],
@@ -25,30 +25,12 @@ export function localBusinessSchema(city?: string) {
     foundingDate: BUSINESS.founded,
     currenciesAccepted: "USD",
     paymentAccepted: "Cash, Credit Card, Venmo, Zelle",
-    address: {
-      "@type": "PostalAddress",
-      addressLocality: city || "Schaumburg",
-      addressRegion: "IL",
-      addressCountry: "US",
-    },
-    geo: {
-      "@type": "GeoCoordinates",
-      latitude: BUSINESS.geo.latitude,
-      longitude: BUSINESS.geo.longitude,
-    },
+    // Service-area business (mobile only, no storefront): no address or geo
+    // coordinates are published — Google is told the coverage via areaServed.
     areaServed: CITIES.map((c) => ({
       "@type": "City",
       name: `${c.name}, IL`,
     })),
-    serviceArea: {
-      "@type": "GeoCircle",
-      geoMidpoint: {
-        "@type": "GeoCoordinates",
-        latitude: BUSINESS.geo.latitude,
-        longitude: BUSINESS.geo.longitude,
-      },
-      geoRadius: BUSINESS.serviceRadiusMiles * 1609,
-    },
     openingHoursSpecification: [
       {
         "@type": "OpeningHoursSpecification",

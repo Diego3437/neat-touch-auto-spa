@@ -45,6 +45,10 @@ const CITY_INTROS: Record<string, string> = {
     "Glenview is one of the North Shore's most desirable suburbs, and its drivers expect meticulous care. Neat Touch Auto Spa delivers premium mobile interior detailing throughout Glenview — from The Glen to established neighborhoods near Wagner Farm.",
   deerfield:
     "Deerfield is a distinguished Lake County community with strong neighborhoods and a busy commuter base. Neat Touch Auto Spa brings mobile interior detailing directly to Deerfield driveways and offices — showroom-fresh results without leaving home.",
+  warrenville:
+    "Warrenville is a welcoming DuPage County community along the DuPage River, surrounded by forest preserves and easy I-88 access. Neat Touch Auto Spa brings premium mobile interior detailing right to your Warrenville home or office.",
+  "downers-grove":
+    "Downers Grove is one of DuPage County's most established suburbs, with a lively downtown and a strong commuter community. Neat Touch Auto Spa delivers mobile interior detailing directly to Downers Grove driveways and workplaces — no drop-off required.",
   "arlington-heights":
     "Arlington Heights is one of the Northwest suburbs' premier communities, with active neighborhoods and busy commuters. Neat Touch Auto Spa serves Arlington Heights with professional mobile detailing delivered to your home or office.",
   barrington:
@@ -313,6 +317,50 @@ const CITY_FAQS: Record<string, { question: string; answer: string }[]> = {
       question: "Can you come to my Deerfield home or office on weekdays?",
       answer:
         "Yes — we operate Monday through Saturday, 8am–6pm, and weekday appointments in Deerfield are readily available at homes and workplaces alike.",
+    },
+  ],
+  warrenville: [
+    {
+      question: "Do you serve all of Warrenville?",
+      answer:
+        "Yes — we serve all of Warrenville, from neighborhoods near the DuPage River and Cerny to the Route 59 corridor, plus nearby Naperville, Wheaton, Winfield and West Chicago.",
+    },
+    {
+      question: "How much does interior detailing cost in Warrenville?",
+      answer:
+        "Our Full Interior Detail is $220 for sedans and $240 for SUVs and larger vehicles, with no travel surcharge for Warrenville. The Interior + Exterior package is $300 sedan / $320 SUV.",
+    },
+    {
+      question: "Can you detail my car at my Warrenville home or office?",
+      answer:
+        "Absolutely. We come to your driveway or workplace — we just need access to a standard water spigot and a 110V outlet near the vehicle.",
+    },
+    {
+      question: "Can you remove winter salt stains from my carpets in Warrenville?",
+      answer:
+        "Yes. DuPage winters leave salt and grit deep in carpets and mats. Our carpet extraction and seat shampoo services lift that buildup out — a popular spring booking for Warrenville drivers.",
+    },
+  ],
+  "downers-grove": [
+    {
+      question: "Do you serve all of Downers Grove?",
+      answer:
+        "Yes — we serve all of Downers Grove, from downtown near the Tivoli Theatre and the Main Street Metra to neighborhoods off Ogden and Belmont, plus nearby Woodridge, Lisle, Westmont and Darien.",
+    },
+    {
+      question: "How much does interior detailing cost in Downers Grove?",
+      answer:
+        "A Full Interior Detail is $220 for sedans and $240 for SUVs and larger vehicles, with no travel surcharge for Downers Grove. The Interior + Exterior package is $300 sedan / $320 SUV.",
+    },
+    {
+      question: "Can you detail my car at my Downers Grove workplace?",
+      answer:
+        "Yes — many Downers Grove clients have us detail their vehicle in an office or business parking lot during the workday. We just need water and power access.",
+    },
+    {
+      question: "Do you offer recurring maintenance details in Downers Grove?",
+      answer:
+        "Yes — many Downers Grove commuters book a Maintenance Detail on a monthly or bi-monthly schedule. Contact us to set one up.",
     },
   ],
   "arlington-heights": [
@@ -669,6 +717,56 @@ const CITY_SECTIONS: Record<
       },
     ],
   },
+  warrenville: {
+    neighborhoods: [
+      "Downtown Warrenville & Cerny",
+      "Along the DuPage River",
+      "Near Blackwell Forest Preserve",
+      "Route 59 corridor",
+      "Neighborhoods off Batavia Road",
+      "Near Warrenville Grove",
+    ],
+    sections: [
+      {
+        title: "Mobile Interior Detailing in Warrenville",
+        paragraphs: [
+          "Warrenville sits right along the DuPage River with quick access to I-88, so local drivers put real miles on their vehicles between commuting and weekend trips. Between that and the pollen, mud and winter salt that come with a river-and-forest-preserve town, interiors take a beating.",
+          "Neat Touch Auto Spa brings the full interior detail to your Warrenville driveway or office — vacuum, seats, carpets, dash, glass and leather conditioning — so you never have to drop your car off or wait at a shop.",
+        ],
+      },
+      {
+        title: "Transparent Warrenville Pricing",
+        paragraphs: [
+          "No travel surcharge for Warrenville: a Full Interior Detail is $220 for sedans and $240 for SUVs and larger vehicles, and the Interior + Exterior package is $300 (sedan) or $320 (SUV), adding a hand wash, spray wax, tire shine, and exterior windows.",
+        ],
+      },
+    ],
+  },
+  "downers-grove": {
+    neighborhoods: [
+      "Downtown & the Tivoli Theatre",
+      "Main Street Metra area",
+      "Ogden Avenue corridor",
+      "Belmont neighborhood",
+      "Near Downers Grove North & South",
+      "Hobson & Fairview areas",
+    ],
+    sections: [
+      {
+        title: "Mobile Interior Detailing Across Downers Grove",
+        paragraphs: [
+          "Downers Grove is one of DuPage County's busiest commuter towns, anchored by the Main Street Metra and a lively downtown. Daily commuting on Ogden and I-355, plus family driving, fills cabins with coffee spills, crumbs and — every winter — road salt tracked deep into the carpets.",
+          "We bring a complete interior detail to your Downers Grove home or office, from downtown near the Tivoli to neighborhoods off Belmont and Fairview. Many commuters have us detail their car in the office lot during the workday.",
+        ],
+      },
+      {
+        title: "Transparent Downers Grove Pricing",
+        paragraphs: [
+          "No travel surcharge for Downers Grove: a Full Interior Detail is $220 for sedans and $240 for SUVs and larger vehicles, and the Interior + Exterior package is $300 (sedan) or $320 (SUV). Carpet extraction is a popular spring add-on after salt season.",
+        ],
+      },
+    ],
+  },
 };
 
 // Real, verified customer testimonials tied to a specific city. Only add a city
@@ -720,7 +818,7 @@ const DEFAULT_FAQS = [
   {
     question: "What areas of the suburbs do you serve?",
     answer:
-      "We serve Schaumburg, Elgin, St. Charles, Geneva, Batavia, Naperville, Arlington Heights, Barrington, Dundee, Wheaton, Highland Park, and surrounding communities.",
+      "We serve Naperville, Aurora, Oswego, Lombard, Glenview, Deerfield, Geneva, Dundee, Warrenville, Downers Grove and many surrounding Chicago suburbs.",
   },
   {
     question: "How do I book an appointment?",
@@ -764,15 +862,7 @@ export default async function CityPage({ params }: Props) {
   const hasServicePages = !SERVICE_PAGE_EXCLUDED.includes(city);
   const cityVideo = CITY_VIDEO[city];
 
-  const schemaLD = {
-    ...localBusinessSchema(cityData.name),
-    address: {
-      "@type": "PostalAddress",
-      addressLocality: cityData.name,
-      addressRegion: "IL",
-      addressCountry: "US",
-    },
-  };
+  const schemaLD = localBusinessSchema();
 
   const faqLD = faqSchema(faqs);
   const pageLD = webPageSchema({

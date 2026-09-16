@@ -66,7 +66,11 @@ export default function ContactPage() {
             Contact Us
           </h1>
           <p className="text-gray-400 text-lg max-w-2xl mx-auto">
-            Have a question or ready to book? We&apos;ll get back to you within one business day.
+            Have a question or ready to book?{" "}
+            <a href={`tel:${BUSINESS.phone}`} className="text-[#C9A84C] font-semibold hover:underline">
+              Call or text {BUSINESS.phone}
+            </a>{" "}
+            for the fastest answer — or send the form below.
           </p>
         </div>
       </section>

@@ -176,6 +176,34 @@ export const CITIES = [
     },
   },
   {
+    name: "Warrenville",
+    slug: "warrenville",
+    county: "DuPage County",
+    nearby: ["Naperville", "Wheaton", "Winfield", "West Chicago"],
+    zips: ["60555"],
+    localNote:
+      "In Warrenville we detail homes near the DuPage River and along the Route 59 and I-88 corridor — commuter and family vehicles that pick up plenty of dust, crumbs and winter salt. We bring the full detail to your driveway.",
+    localFaq: {
+      question: "Do you serve the whole Warrenville area?",
+      answer:
+        "Yes — we serve all of Warrenville, from neighborhoods near the DuPage River to the Route 59 corridor, plus nearby Naperville, Wheaton, Winfield and West Chicago.",
+    },
+  },
+  {
+    name: "Downers Grove",
+    slug: "downers-grove",
+    county: "DuPage County",
+    nearby: ["Woodridge", "Lisle", "Westmont", "Darien"],
+    zips: ["60515", "60516", "60517"],
+    localNote:
+      "In Downers Grove we cover everything from downtown near the Tivoli Theatre and the Main Street Metra to neighborhoods off Ogden and Belmont — busy commuter cabins that collect coffee spills, crumbs and winter salt.",
+    localFaq: {
+      question: "Do you serve the whole Downers Grove area?",
+      answer:
+        "Yes — we serve all of Downers Grove, from downtown and the Main Street Metra area to neighborhoods off Ogden and Belmont, plus nearby Woodridge, Lisle, Westmont and Darien.",
+    },
+  },
+  {
     // Test market — high Search Console impressions. Landing page only (no
     // per-service pages yet); see SERVICE_PAGE_EXCLUDED below.
     name: "Schaumburg",

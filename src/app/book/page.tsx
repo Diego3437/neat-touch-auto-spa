@@ -1,5 +1,6 @@
 import { BookingForm } from "@/components/sections/BookingForm";
-import { AlertCircle } from "lucide-react";
+import { AlertCircle, Phone } from "lucide-react";
+import { BUSINESS } from "@/lib/constants";
 import { buildMetadata } from "@/lib/metadata";
 import { breadcrumbSchema, webPageSchema } from "@/lib/schema";
 
@@ -63,6 +64,20 @@ export default function BookPage() {
       {/* Form */}
       <section className="bg-[#0a0a0a] section-padding">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+          {/* Fast-track: call or text */}
+          <div className="flex flex-col sm:flex-row items-center justify-between gap-4 bg-[#C9A84C]/10 border border-[#C9A84C]/40 rounded-lg px-5 py-4 mb-6">
+            <p className="text-white text-sm sm:text-base font-medium text-center sm:text-left">
+              Prefer an instant answer? <span className="text-gray-400">Call or text us and we&apos;ll get you scheduled fast.</span>
+            </p>
+            <a
+              href={`tel:${BUSINESS.phone}`}
+              className="flex-shrink-0 inline-flex items-center gap-2 bg-[#C9A84C] hover:bg-[#E0C47A] text-black font-semibold px-6 py-3 rounded-sm transition-colors"
+            >
+              <Phone size={18} />
+              {BUSINESS.phone}
+            </a>
+          </div>
+
           {/* Water/Power note */}
           <div className="flex items-start gap-3 bg-amber-950/30 border border-amber-900/50 px-5 py-4 mb-8">
             <AlertCircle size={18} className="text-amber-400 flex-shrink-0 mt-0.5" />
