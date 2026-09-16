@@ -84,12 +84,14 @@ export function HeroSection() {
           className="animate-fade-up flex flex-col sm:flex-row gap-4 justify-center items-center mb-10"
           style={{ animationDelay: "240ms" }}
         >
-          <Link
-            href="/book"
+          <a
+            href={BUSINESS.bookingUrl}
+            target="_blank"
+            rel="noopener noreferrer"
             className="shine bg-[#C9A84C] hover:bg-[#E0C47A] text-black font-semibold px-10 py-4 text-lg rounded-sm transition-colors duration-200 w-full sm:w-auto text-center shadow-lg shadow-[#C9A84C]/20"
           >
             Book Now
-          </Link>
+          </a>
           <a
             href={`tel:${BUSINESS.phone}`}
             className="group border-2 border-white/30 hover:border-[#C9A84C] hover:bg-white/5 text-white font-semibold px-10 py-4 text-lg rounded-sm transition-all duration-200 w-full sm:w-auto text-center flex items-center justify-center gap-2"

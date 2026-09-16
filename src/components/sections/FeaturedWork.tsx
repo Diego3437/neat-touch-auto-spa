@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { Check } from "lucide-react";
+import { BUSINESS } from "@/lib/constants";
 
 export function FeaturedWork() {
   return (
@@ -36,12 +37,14 @@ export function FeaturedWork() {
               ))}
             </ul>
             <div className="flex flex-wrap gap-4">
-              <Link
-                href="/book"
+              <a
+                href={BUSINESS.bookingUrl}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="bg-[#C9A84C] hover:bg-[#E0C47A] text-black font-semibold px-8 py-3 rounded-sm transition-colors"
               >
                 Book Your Detail
-              </Link>
+              </a>
               <Link
                 href="/gallery"
                 className="border-2 border-white/25 hover:border-[#C9A84C] text-white hover:text-[#C9A84C] font-semibold px-8 py-3 rounded-sm transition-colors"

@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { Check } from "lucide-react";
-import { PRICING, ADDONS } from "@/lib/constants";
+import { PRICING, ADDONS, BUSINESS } from "@/lib/constants";
 import { CTASection } from "@/components/sections/CTASection";
 import { SectionHeader } from "@/components/ui/SectionHeader";
 import { buildMetadata } from "@/lib/metadata";
@@ -128,7 +128,9 @@ export default function PricingPage() {
                 </ul>
 
                 <a
-                  href="/book"
+                  href={BUSINESS.bookingUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className={`block text-center font-semibold py-3 rounded-lg transition-colors duration-200 ${
                     pkg.featured
                       ? "bg-[#C9A84C] hover:bg-[#E0C47A] text-black shadow-lg shadow-[#C9A84C]/20"
@@ -139,6 +141,40 @@ export default function PricingPage() {
                 </a>
               </div>
             ))}
+          </div>
+
+          {/* Standalone service */}
+          <div className="mb-12 rounded-2xl border border-[#C9A84C]/40 bg-[#0a0a0a] p-8">
+            <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-6">
+              <div className="md:max-w-xl">
+                <span className="inline-block text-[#C9A84C] text-xs font-semibold uppercase tracking-[0.2em] mb-2">
+                  Standalone Service
+                </span>
+                <h2
+                  className="text-2xl font-bold text-white mb-2"
+                  style={{ fontFamily: "var(--font-playfair, serif)" }}
+                >
+                  Pet Hair Removal Only
+                </h2>
+                <p className="text-gray-400 text-sm">
+                  Just need the pet hair gone — no full detail? We&apos;ll remove embedded hair from seats, carpets and cargo areas as a standalone service. Final pricing depends on the vehicle and how much hair there is.
+                </p>
+              </div>
+              <div className="flex flex-col items-start md:items-end gap-3 flex-shrink-0">
+                <div>
+                  <p className="text-xs uppercase tracking-wider text-gray-500 mb-1">Starting at</p>
+                  <p className="text-4xl font-bold gold-text-gradient">$100</p>
+                </div>
+                <a
+                  href={BUSINESS.bookingUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-block bg-[#C9A84C] hover:bg-[#E0C47A] text-black font-semibold px-8 py-3 rounded-sm transition-colors"
+                >
+                  Book Pet Hair Removal
+                </a>
+              </div>
+            </div>
           </div>
 
           {/* Add-ons */}
@@ -202,12 +238,14 @@ export default function PricingPage() {
             </Link>
             .
           </p>
-          <Link
-            href="/book"
+          <a
+            href={BUSINESS.bookingUrl}
+            target="_blank"
+            rel="noopener noreferrer"
             className="inline-block bg-[#C9A84C] hover:bg-[#A07830] text-black font-semibold px-8 py-3 transition-colors"
           >
-            Get Your Exact Quote
-          </Link>
+            Book Online Now
+          </a>
         </div>
       </section>
 

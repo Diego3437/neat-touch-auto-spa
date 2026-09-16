@@ -82,12 +82,14 @@ export function Header() {
               <Phone size={14} />
               {BUSINESS.phone}
             </a>
-            <Link
-              href="/book"
+            <a
+              href={BUSINESS.bookingUrl}
+              target="_blank"
+              rel="noopener noreferrer"
               className="shine bg-[#C9A84C] hover:bg-[#E0C47A] text-black text-sm font-semibold px-5 py-2 rounded-sm transition-colors duration-200"
             >
               Book Now
-            </Link>
+            </a>
           </div>
 
           {/* Mobile hamburger */}
@@ -122,13 +124,15 @@ export function Header() {
               >
                 Call {BUSINESS.phone}
               </a>
-              <Link
-                href="/book"
+              <a
+                href={BUSINESS.bookingUrl}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="bg-[#C9A84C] text-black text-center font-semibold py-3"
                 onClick={() => setMobileOpen(false)}
               >
                 Book Now
-              </Link>
+              </a>
             </div>
           </nav>
         </div>

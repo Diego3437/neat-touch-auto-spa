@@ -1,4 +1,3 @@
-import Link from "next/link";
 import { Phone } from "lucide-react";
 import { BUSINESS } from "@/lib/constants";
 
@@ -25,12 +24,14 @@ export function CTASection({
         </h2>
         <p className="text-gray-400 text-lg mb-10 max-w-2xl mx-auto">{subtitle}</p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <Link
-            href="/book"
+          <a
+            href={BUSINESS.bookingUrl}
+            target="_blank"
+            rel="noopener noreferrer"
             className="bg-[#C9A84C] hover:bg-[#A07830] text-black font-semibold px-10 py-4 text-lg transition-colors duration-200"
           >
             Book Your Detail
-          </Link>
+          </a>
           <a
             href={`tel:${BUSINESS.phone}`}
             className="border-2 border-white hover:border-[#C9A84C] text-white hover:text-[#C9A84C] font-semibold px-10 py-4 text-lg transition-colors duration-200 flex items-center justify-center gap-2"

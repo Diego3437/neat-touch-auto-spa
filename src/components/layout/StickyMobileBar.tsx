@@ -1,4 +1,3 @@
-import Link from "next/link";
 import { Phone, Calendar } from "lucide-react";
 import { BUSINESS } from "@/lib/constants";
 
@@ -12,13 +11,15 @@ export function StickyMobileBar() {
         <Phone size={18} />
         Call Now
       </a>
-      <Link
-        href="/book"
+      <a
+        href={BUSINESS.bookingUrl}
+        target="_blank"
+        rel="noopener noreferrer"
         className="flex-1 flex items-center justify-center gap-2 py-4 bg-[#C9A84C] text-black font-semibold text-sm hover:bg-[#A07830] transition-colors"
       >
         <Calendar size={18} />
         Book Now
-      </Link>
+      </a>
     </div>
   );
 }

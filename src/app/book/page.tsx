@@ -1,5 +1,4 @@
-import { BookingForm } from "@/components/sections/BookingForm";
-import { AlertCircle, Phone } from "lucide-react";
+import { AlertCircle, Phone, Calendar, ExternalLink } from "lucide-react";
 import { BUSINESS } from "@/lib/constants";
 import { buildMetadata } from "@/lib/metadata";
 import { breadcrumbSchema, webPageSchema } from "@/lib/schema";
@@ -56,7 +55,7 @@ export default function BookPage() {
             Book Your Mobile Detail
           </h1>
           <p className="text-gray-400 text-lg max-w-xl mx-auto">
-            Fill out the form below and we&apos;ll contact you within one business day to confirm your appointment.
+            Book online in a couple of minutes — pick your service and a time that works for you. Prefer to talk? Call or text us anytime.
           </p>
         </div>
       </section>
@@ -86,7 +85,37 @@ export default function BookPage() {
             </p>
           </div>
 
-          <BookingForm />
+          {/* Online booking launcher (Jobber) */}
+          <div className="bg-white/[0.03] border border-[#C9A84C]/30 rounded-xl p-8 text-center">
+            <div className="w-14 h-14 mx-auto mb-5 rounded-full bg-[#C9A84C]/15 flex items-center justify-center">
+              <Calendar size={26} className="text-[#C9A84C]" />
+            </div>
+            <h2
+              className="text-2xl md:text-3xl font-bold text-white mb-3"
+              style={{ fontFamily: "var(--font-playfair, serif)" }}
+            >
+              Book Your Appointment Online
+            </h2>
+            <p className="text-gray-400 mb-8 max-w-md mx-auto">
+              Choose your service, vehicle and a time that works for you. It only takes a couple of minutes — no waiting for a callback.
+            </p>
+            <a
+              href={BUSINESS.bookingUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 bg-[#C9A84C] hover:bg-[#E0C47A] text-black font-semibold px-10 py-4 text-lg rounded-sm transition-colors"
+            >
+              Book Online Now
+              <ExternalLink size={18} />
+            </a>
+            <p className="text-gray-500 text-sm mt-5">
+              Opens our secure booking page. Prefer to talk?{" "}
+              <a href={`tel:${BUSINESS.phone}`} className="text-[#C9A84C] hover:underline">
+                Call or text {BUSINESS.phone}
+              </a>
+              .
+            </p>
+          </div>
         </div>
       </section>
     </>

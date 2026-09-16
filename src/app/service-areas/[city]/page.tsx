@@ -1010,12 +1010,14 @@ export default async function CityPage({ params }: Props) {
                 </h2>
                 <p className="text-gray-400 leading-relaxed mb-8">{cityVideo.blurb}</p>
                 <div className="flex flex-wrap gap-4">
-                  <Link
-                    href="/book"
+                  <a
+                    href={BUSINESS.bookingUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="bg-[#C9A84C] hover:bg-[#E0C47A] text-black font-semibold px-8 py-3 rounded-sm transition-colors"
                   >
                     Book Your Detail
-                  </Link>
+                  </a>
                   <Link
                     href="/gallery"
                     className="border-2 border-white/25 hover:border-[#C9A84C] text-white hover:text-[#C9A84C] font-semibold px-8 py-3 rounded-sm transition-colors"
@@ -1185,12 +1187,14 @@ export default async function CityPage({ params }: Props) {
             Book your mobile detail today. We come to you in {cityData.name} and throughout the Chicago suburbs.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
-              href="/book"
+            <a
+              href={BUSINESS.bookingUrl}
+              target="_blank"
+              rel="noopener noreferrer"
               className="bg-[#C9A84C] hover:bg-[#A07830] text-black font-semibold px-10 py-4 text-lg transition-colors duration-200"
             >
               Book Now
-            </Link>
+            </a>
             <a
               href={`tel:${BUSINESS.phone}`}
               className="border-2 border-white hover:border-[#C9A84C] text-white hover:text-[#C9A84C] font-semibold px-10 py-4 text-lg transition-colors duration-200 flex items-center justify-center gap-2"
