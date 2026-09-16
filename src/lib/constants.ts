@@ -21,7 +21,7 @@ export const BUSINESS = {
     instagram: "https://www.instagram.com/neattouchautospa",
     tiktok: "https://www.tiktok.com/@neat.touch.auto.sp",
   },
-  rating: { value: 5.0, count: 26 },
+  rating: { value: 5.0, count: 27 },
   thumbtack: {
     url: "https://www.thumbtack.com/profile/services/548908778321674240/",
     reviews: 54,
@@ -57,7 +57,7 @@ export const SEO_KEYWORDS = [
 // Headline stats used in the hero and trust sections
 export const STATS = [
   { value: "100+", label: "Vehicles Detailed" },
-  { value: "5.0★", label: "26 Google Reviews" },
+  { value: "5.0★", label: "27 Google Reviews" },
   { value: "5.0★", label: "54 Thumbtack Reviews" },
   { value: "100%", label: "Mobile Service" },
 ];
@@ -423,6 +423,12 @@ export const ADDONS = [
 
 // Real Google reviews. Add more from your Google Business Profile as you collect them.
 export const REVIEWS = [
+  {
+    name: "Matthew Bryant",
+    meta: "Verified Google review · Naperville, IL",
+    rating: 5,
+    text: "Diego came out to my house in Naperville and did an amazing job detailing my Bronco! Definitely recommend!",
+  },
   {
     name: "A.S.",
     meta: "Verified Google review · Naperville, IL",
