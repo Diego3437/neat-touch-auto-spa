@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { SectionHeader } from "@/components/ui/SectionHeader";
 import { Reveal } from "@/components/ui/Reveal";
+import { TiltCard } from "@/components/ui/TiltCard";
 
 const TRANSFORMATIONS = [
   { vehicle: "Mercedes-Benz", before: "/gallery/mercedes-before.jpg", after: "/gallery/mercedes-after.jpg" },
@@ -38,38 +39,36 @@ export function RealBeforeAfter({
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {items.map((item, i) => (
-            <Reveal
-              key={item.before}
-              delay={(i % 3) * 90}
-              className="overflow-hidden rounded-lg border border-gray-200"
-            >
-              <div className="grid grid-cols-2">
-                <div className="relative aspect-square">
-                  <Image
-                    src={item.before}
-                    alt={`${item.vehicle} interior before detailing`}
-                    fill
-                    sizes="(max-width: 640px) 50vw, (max-width: 1024px) 25vw, 16vw"
-                    className="object-cover"
-                  />
-                  <span className="absolute left-2 top-2 rounded-full bg-black/70 px-2 py-0.5 text-[10px] font-semibold uppercase tracking-widest text-white">
-                    Before
-                  </span>
+            <Reveal key={item.before} delay={(i % 3) * 90}>
+              <TiltCard className="overflow-hidden rounded-xl border border-gray-200 bg-white">
+                <div className="grid grid-cols-2">
+                  <div className="relative aspect-square">
+                    <Image
+                      src={item.before}
+                      alt={`${item.vehicle} interior before detailing`}
+                      fill
+                      sizes="(max-width: 640px) 50vw, (max-width: 1024px) 25vw, 16vw"
+                      className="object-cover"
+                    />
+                    <span className="absolute left-2 top-2 rounded-full bg-black/70 px-2 py-0.5 text-[10px] font-semibold uppercase tracking-widest text-white">
+                      Before
+                    </span>
+                  </div>
+                  <div className="relative aspect-square">
+                    <Image
+                      src={item.after}
+                      alt={`${item.vehicle} interior after detailing`}
+                      fill
+                      sizes="(max-width: 640px) 50vw, (max-width: 1024px) 25vw, 16vw"
+                      className="object-cover"
+                    />
+                    <span className="absolute left-2 top-2 rounded-full bg-[#C9A84C] px-2 py-0.5 text-[10px] font-semibold uppercase tracking-widest text-black">
+                      After
+                    </span>
+                  </div>
                 </div>
-                <div className="relative aspect-square">
-                  <Image
-                    src={item.after}
-                    alt={`${item.vehicle} interior after detailing`}
-                    fill
-                    sizes="(max-width: 640px) 50vw, (max-width: 1024px) 25vw, 16vw"
-                    className="object-cover"
-                  />
-                  <span className="absolute left-2 top-2 rounded-full bg-[#C9A84C] px-2 py-0.5 text-[10px] font-semibold uppercase tracking-widest text-black">
-                    After
-                  </span>
-                </div>
-              </div>
-              <p className="px-3 py-2.5 text-sm font-semibold text-black">{item.vehicle}</p>
+                <p className="px-3 py-2.5 text-sm font-semibold text-black">{item.vehicle}</p>
+              </TiltCard>
             </Reveal>
           ))}
         </div>

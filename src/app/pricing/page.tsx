@@ -4,6 +4,7 @@ import { PRICING, ADDONS, BUSINESS } from "@/lib/constants";
 import { CTASection } from "@/components/sections/CTASection";
 import { PriceEstimator } from "@/components/sections/PriceEstimator";
 import { SectionHeader } from "@/components/ui/SectionHeader";
+import { TiltCard } from "@/components/ui/TiltCard";
 import { buildMetadata } from "@/lib/metadata";
 import { breadcrumbSchema, webPageSchema } from "@/lib/schema";
 
@@ -81,12 +82,12 @@ export default function PricingPage() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
             {PRICING.map((pkg) => (
-              <div
+              <TiltCard
                 key={pkg.name}
-                className={`group relative rounded-2xl p-8 transition-all duration-300 hover:-translate-y-1.5 ${
+                className={`group rounded-2xl p-8 ${
                   pkg.featured
                     ? "bg-gradient-to-b from-[#161616] to-black border border-[#C9A84C]/60 shadow-[0_25px_60px_-20px_rgba(201,168,76,0.45)] lg:scale-[1.03]"
-                    : "bg-white border border-gray-200 hover:border-[#C9A84C]/50 hover:shadow-2xl"
+                    : "bg-white border border-gray-200 hover:border-[#C9A84C]/50"
                 }`}
               >
                 {pkg.featured && (
@@ -143,7 +144,7 @@ export default function PricingPage() {
                 >
                   Book This Package
                 </a>
-              </div>
+              </TiltCard>
             ))}
           </div>
 

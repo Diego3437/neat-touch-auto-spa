@@ -2,6 +2,7 @@ import Link from "next/link";
 import { Sofa, Car, Sparkles, Dog, Wind, Star, Armchair, RefreshCw, Truck } from "lucide-react";
 import { SectionHeader } from "@/components/ui/SectionHeader";
 import { Reveal } from "@/components/ui/Reveal";
+import { TiltCard } from "@/components/ui/TiltCard";
 
 const ICON_MAP: Record<string, React.ComponentType<{ size?: number; className?: string }>> = {
   Sofa,
@@ -63,7 +64,7 @@ export function ServiceHighlights() {
             const Icon = ICON_MAP[item.icon] || Car;
             return (
               <Reveal key={item.title} delay={i * 80}>
-                <div className="group relative h-full flex items-start gap-4 border border-gray-100 hover:border-[#C9A84C]/60 p-5 rounded-lg bg-white transition-all duration-300 hover:shadow-lg hover:-translate-y-0.5 overflow-hidden">
+                <TiltCard className="group h-full flex items-start gap-4 border border-gray-100 hover:border-[#C9A84C]/60 p-5 rounded-xl bg-white overflow-hidden">
                   <div className="relative w-10 h-10 flex-shrink-0 bg-[#C9A84C]/10 group-hover:bg-[#C9A84C] rounded-lg flex items-center justify-center transition-colors duration-300">
                     <Icon size={18} className="text-[#C9A84C] group-hover:text-black transition-colors duration-300" />
                   </div>
@@ -71,7 +72,7 @@ export function ServiceHighlights() {
                     <h3 className="text-black font-semibold text-base mb-1">{item.title}</h3>
                     <p className="text-gray-500 text-sm leading-snug">{item.desc}</p>
                   </div>
-                </div>
+                </TiltCard>
               </Reveal>
             );
           })}

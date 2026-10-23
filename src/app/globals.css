@@ -199,6 +199,44 @@ body {
   left: 130%;
 }
 
+/* Interactive 3D tilt card — follows the cursor, with a gold spotlight glow */
+.tilt-card {
+  position: relative;
+  transform: perspective(900px) rotateX(var(--rx, 0deg)) rotateY(var(--ry, 0deg))
+    translateZ(0);
+  transform-style: preserve-3d;
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s ease;
+  will-change: transform;
+}
+.tilt-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  pointer-events: none;
+  background: radial-gradient(
+    420px circle at var(--mx, 50%) var(--my, 50%),
+    rgba(201, 168, 76, 0.18),
+    transparent 42%
+  );
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+.tilt-card:hover {
+  box-shadow: 0 30px 60px -25px rgba(0, 0, 0, 0.45);
+}
+.tilt-card:hover::after {
+  opacity: 1;
+}
+@media (hover: none) {
+  .tilt-card {
+    transform: none !important;
+  }
+  .tilt-card::after {
+    display: none;
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   *,
   .reveal,
@@ -206,7 +244,8 @@ body {
   .animate-fade-in,
   .animate-float-slow,
   .animate-float-slower,
-  .animate-gradient-pan {
+  .animate-gradient-pan,
+  .tilt-card {
     animation: none !important;
     transition: none !important;
     opacity: 1 !important;
